@@ -1,639 +1,593 @@
 <!doctype html>
-<html lang="en" data-bs-theme="dark">
+<html lang="en" class="light">
 
 <head>
     <meta charset="utf-8">
-    <title>Moonlight Enterprises</title>
-    <meta content="width=device-width, initial-scale=1.0" name="viewport">
-    <meta content="" name="keywords">
-    <meta content="" name="description">
+    <title>Moonlight Enterprises — Security & HVAC Solutions</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Moonlight Enterprises — total solution provider for CCTV, fire alarm, access control, HVAC and IBMS services in Mumbai and Thane.">
 
-    <!-- Favicon -->
-    <link href="img/favicon.ico" rel="icon">
-
-    <!-- Google Web Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500&family=Roboto:wght@500;700;900&display=swap" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link href="https://fonts.googleapis.com/css2?family=Cedarville+Cursive&display=swap" rel="stylesheet"> 
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 
-    <!-- Icon Font Stylesheet -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
-
-    <!-- Libraries Stylesheet -->
-    <link href="lib/animate/animate.min.css" rel="stylesheet">
-    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
-    <link href="lib/lightbox/css/lightbox.min.css" rel="stylesheet">
-
-    <!-- Customized Bootstrap Stylesheet -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
-
-    <!-- Template Stylesheet -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#E63946',
+                        primaryHover: '#C1121F',
+                        darkBg: '#050505',
+                        darkCard: '#0f0f0f',
+                        darkBorder: '#1f1f1f',
+                    },
+                    fontFamily: {
+                        'syne':   ['Barlow', 'sans-serif'],
+                        'barlow': ['Barlow', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
     <link href="css/style.css" rel="stylesheet">
 </head>
 
-<body>
-    <!-- Spinner Start -->
-    <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
-        <div class="spinner-grow text-primary" style="width: 3rem; height: 3rem;" role="status">
-            <span class="sr-only">Loading...</span>
-        </div>
+<body class="bg-white text-gray-900 dark:bg-darkBg dark:text-gray-100 transition-colors duration-300 antialiased overflow-x-hidden">
+
+    <!-- Custom Cursor -->
+    <div class="custom-cursor hidden lg:block"></div>
+    <div class="custom-cursor-dot hidden lg:block"></div>
+
+    <!-- Preloader -->
+    <div id="spinner" class="show">
+        <div class="preloader-logo">M<span>E</span>.</div>
+        <div class="preloader-tagline">Security &amp; HVAC Solutions</div>
+        <div class="preloader-bar"><div class="preloader-bar-fill"></div></div>
     </div>
-    <!-- Spinner End -->
 
+    <!-- ═══════════════════════════════════════════
+         NAVBAR — Floating glass pill, centered
+    ═══════════════════════════════════════════ -->
+    <nav class="fixed top-0 left-0 right-0 z-[1030] flex justify-center transition-all duration-500" id="navbar">
 
-    <!-- Topbar Start -->
-    <div class="container-fluid bg-light p-0">
-        <div class="row gx-0 d-none d-lg-flex">
-            <div class="col-lg-7 px-5 text-start">
-                <div class="h-100 d-inline-flex align-items-center py-3 me-4">
-                    <small class="fa fa-map-marker-alt text-primary me-2"></small>
-                    <small>411, Sainath Co-Op Society, Thane (W)</small>
-                </div>
-                <div class="h-100 d-inline-flex align-items-center py-3">
-                    <small class="far fa-clock text-primary me-2"></small>
-                    <small>All days : 09.00 AM - 09.00 PM</small>
-                </div>
+        <div class="nav-pill-wrap">
+
+            <!-- Logo -->
+            <a href="index.html" class="nav-logo-text mr-6 lg:mr-8">
+                M<span class="accent">E</span>.
+            </a>
+
+            <!-- Desktop Links -->
+            <div class="hidden lg:flex items-center gap-1 flex-1">
+                <a href="index.html" class="nav-link active">Home</a>
+                <a href="#about"    class="nav-link">About</a>
+                <a href="#services" class="nav-link">Services</a>
+                <a href="#projects" class="nav-link">Projects</a>
             </div>
-            <div class="col-lg-5 px-5 text-end">
-                <div class="h-100 d-inline-flex align-items-center py-3 me-4">
-                    <small class="fa fa-phone-alt text-primary me-2"></small>
-                    <small>+91 7715832047</small>
-                </div>
-                <div class="h-100 d-inline-flex align-items-center">
-                    <a class="btn btn-sm-square bg-white text-primary me-1" href="facebook.com/moonlight_enterprises/"><i class="fab fa-facebook-f"></i></a>
-                    <a class="btn btn-sm-square bg-white text-primary me-1" href="twiter.com//moonlight_enterprises/"><i class="fab fa-twitter"></i></a>
-                    <a class="btn btn-sm-square bg-white text-primary me-1" href="linkedin.com/moonlight_enterprises/"><i class="fab fa-linkedin-in"></i></a>
-                    <a class="btn btn-sm-square bg-white text-primary me-0" href="instagram.com/moonlight_enterprises/"><i class="fab fa-instagram"></i></a>
-                </div>
+
+            <!-- Desktop Actions -->
+            <div class="hidden lg:flex items-center gap-2 ml-6">
+                <button class="theme-toggle theme-toggle-btn" aria-label="Toggle theme">
+                    <i class="fas fa-moon dark:hidden text-xs"></i>
+                    <i class="fas fa-sun hidden dark:block text-xs"></i>
+                </button>
+                <a href="contact.html" class="nav-btn">Let's Talk</a>
+            </div>
+
+            <!-- Mobile Controls -->
+            <div class="flex items-center gap-2 lg:hidden ml-auto">
+                <button class="theme-toggle theme-toggle-btn" aria-label="Toggle theme">
+                    <i class="fas fa-moon dark:hidden text-xs"></i>
+                    <i class="fas fa-sun hidden dark:block text-xs"></i>
+                </button>
+                <button id="mobile-menu-btn" class="w-9 h-9 flex items-center justify-center rounded-full bg-white/10 border border-white/20 text-white focus:outline-none" aria-label="Open menu">
+                    <i class="fas fa-bars text-sm"></i>
+                </button>
             </div>
         </div>
-    </div>
-    <!-- Topbar End -->
 
-
-    <!-- Navbar Start -->
-    <nav class="navbar navbar-expand-lg bg-white navbar-light sticky-top p-0">
-        <a href="index.html" class="navbar-brand d-flex align-items-center px-4 px-lg-5">
-            <h2 class="m-0 text-primary" style="font-family: 'Cedarville Cursive', cursive;"><span style="color: yellowgreen;">M</span>oonlight <span style="color: yellowgreen; ">E</span>nterprises</h2>
-        </a>
-        <button type="button" class="navbar-toggler me-4" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarCollapse">
-            <div class="navbar-nav ms-auto p-4 p-lg-0">
-                <a href="index.html" class="nav-item nav-link active">Home</a>
-                <a href="#about" class="nav-item nav-link">About</a>
-                <a href="#services" class="nav-item nav-link">Service</a>       
-                <a href="#projects" class="nav-item nav-link">Projects</a>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden lg:hidden fixed inset-0 top-0 bg-white dark:bg-darkBg z-[1020] p-10 pt-24">
+            <div class="flex flex-col gap-6 text-3xl font-barlow font-black tracking-tight">
+                <a href="index.html" class="text-primary">Home</a>
+                <a href="#about"    class="text-gray-800 dark:text-gray-200">About</a>
+                <a href="#services" class="text-gray-800 dark:text-gray-200">Services</a>
+                <a href="#projects" class="text-gray-800 dark:text-gray-200">Projects</a>
+                <a href="contact.html" class="text-gray-800 dark:text-gray-200 mt-4 border-t border-gray-200 dark:border-darkBorder pt-6">Contact</a>
             </div>
-            <a href="contact.html" class="btn btn-primary py-4 px-lg-5 d-none d-lg-block">Contact US<i class="fa fa-arrow-right ms-3"></i></a>
         </div>
     </nav>
-    <!-- Navbar End -->
 
+    <!-- ═══════════════════════════════════════════
+         HERO — Full-screen video (hero.html style)
+    ═══════════════════════════════════════════ -->
+    <section class="relative h-screen w-full overflow-hidden bg-black" aria-label="Hero">
 
-    <!-- Carousel Start -->
-    <div class="container-fluid p-0 pb-5" >
-        <div class="owl-carousel header-carousel position-relative">
-            <div class="owl-carousel-item position-relative">
-                <img class="img-fluid" src="img/carousel-1.png" alt="">
-                <div class="position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center" style="background: rgba(53, 53, 53, .7);">
-                    <div class="container">
-                        <div class="row justify-content-center">
-                            <div class="col-12 col-lg-8 text-center">
-                                <h5 class="text-white text-uppercase mb-3 animated slideInDown">Welcome To Moonlight Enterprises</h5>
-                                <h1 class="display-3 text-white animated slideInDown mb-4">Best <span style="color: red;">Security</span> Solution Provider & Services</h1>
-                                <p class="fs-5 fw-medium text-white mb-4 pb-2">As a leading provider in the industry, we offer cutting-edge CCTV, fire alarm, security alarm, and burglar alarm systems to safeguard what matters most to you.</p>
-                                
-                                <a href="contact.html" class="btn btn-light py-md-3 px-md-5 animated slideInRight">Contact US Now!</a>
-                            </div>
-                        </div>
-                    </div>
+        <!-- Background Video — no overlays, no filters -->
+        <video class="hero-video" autoplay loop muted playsinline>
+            <source src="https://d8j0ntlcm91z4.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/hf_20260306_074215_04640ca7-042c-45d6-bb56-58b1e8a42489.mp4" type="video/mp4">
+        </video>
+
+        <!-- Hero Body -->
+        <div class="hero-body">
+
+            <!-- Featured Badge -->
+            <div class="hero-badge hero-badge-outer">
+                <div class="hero-badge-inner">
+                    <div class="hero-badge-dot"></div>
+                    <span class="hero-badge-text">The Standard in Security · Mumbai & Thane</span>
                 </div>
             </div>
-            <div class="owl-carousel-item position-relative">
-                <img class="img-fluid" src="img/carousel-2.png" alt="">
-                <div class="position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center" style="background: rgba(53, 53, 53, .7);">
-                    <div class="container">
-                        <div class="row justify-content-center">
-                            <div class="col-12 col-lg-8 text-center">
-                                
-                                <h1 class="display-3 text-white animated slideInDown mb-4">Your Watchful Eye: <span style="color: gold;">Surveillance</span> and Alarm Experts</h1>
-                                <p class="fs-5 fw-medium text-white mb-4 pb-2">At "Your Watchful Eye," we take pride in being the foremost surveillance and alarm experts, dedicated to keeping a vigilant eye on your safety. With our state-of-the-art surveillance systems and expertly designed alarm solutions, we ensure that every moment is under our watchful gaze, providing you with an unrivaled sense of security.</p>
-                                
-                                
-                            </div>
-                        </div>
+
+            <!-- Headline with 4 Corner Accents -->
+            <div class="hero-headline-wrap">
+                <div class="corner-accent tl"></div>
+                <div class="corner-accent tr"></div>
+                <div class="corner-accent bl"></div>
+                <div class="corner-accent br"></div>
+
+                <h1>
+                    <span class="hl-barlow hero-h1-1">Security that keeps your</span>
+                    <span class="hl-serif hero-h1-2">business protected.</span>
+                </h1>
+            </div>
+
+            <!-- Sub-headline -->
+            <p class="hero-sub hero-desc">
+                Over 2,000+ enterprise projects across Mumbai and Thane. CCTV, fire alarms, access control, HVAC and IBMS — engineered for those who demand zero compromise.
+            </p>
+
+            <!-- CTA Buttons -->
+            <div class="hero-cta-group hero-btns">
+                <a href="contact.html" class="btn-primary-solid">
+                    Get a Quote
+                    <svg width="14" height="14" viewBox="0 0 16 16" fill="none">
+                        <path d="M3 8H13M13 8L9 4M13 8L9 12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </a>
+                <a href="#projects" class="btn-ghost">View Our Work</a>
+            </div>
+        </div>
+
+        <!-- Scroll indicator -->
+        <div class="hero-scroll absolute bottom-8 left-6 lg:left-12 flex items-center gap-4 text-white/50 z-10">
+            <span style="font-family:'Barlow',sans-serif;font-size:11px;font-weight:500;letter-spacing:0.12em;text-transform:uppercase;">Scroll</span>
+            <div class="w-[1px] h-10 bg-white/20 relative overflow-hidden">
+                <div class="absolute top-0 left-0 w-full h-1/2 bg-white scroll-line-inner"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════
+         MARQUEE
+    ═══════════════════════════════════════════ -->
+    <div class="py-5 border-y border-gray-200 dark:border-darkBorder bg-gray-50 dark:bg-darkCard overflow-hidden" aria-hidden="true">
+        <div class="marquee-wrapper">
+            <div class="marquee-content text-3xl lg:text-5xl font-barlow font-black uppercase tracking-tighter text-outline select-none">
+                &nbsp;CCTV Surveillance <span class="text-primary mx-6">✦</span> Fire Alarms <span class="text-primary mx-6">✦</span> Access Control <span class="text-primary mx-6">✦</span> HVAC Systems <span class="text-primary mx-6">✦</span> PA & Intercom <span class="text-primary mx-6">✦</span> CCTV Surveillance <span class="text-primary mx-6">✦</span> Fire Alarms <span class="text-primary mx-6">✦</span> Access Control <span class="text-primary mx-6">✦</span> HVAC Systems <span class="text-primary mx-6">✦</span> PA & Intercom <span class="text-primary mx-6">✦</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- ═══════════════════════════════════════════
+         ABOUT
+    ═══════════════════════════════════════════ -->
+    <section class="py-24 lg:py-32 bg-white dark:bg-darkBg" id="about">
+        <div class="container mx-auto px-6 lg:px-12">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24 items-center">
+
+                <!-- Image -->
+                <div class="relative reveal reveal-left">
+                    <div class="hover-reveal rounded-2xl overflow-hidden aspect-[4/5]">
+                        <img src="img/about-us.png" alt="Moonlight Enterprises team" class="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700" loading="lazy">
+                    </div>
+                    <div class="absolute -bottom-8 -right-8 w-40 h-40 bg-primary rounded-full mix-blend-multiply filter blur-3xl opacity-30 pointer-events-none"></div>
+                    <div class="absolute top-8 -left-4 sm:-left-8 glass-dark text-white p-5 rounded-xl hidden sm:block">
+                        <div class="text-4xl font-barlow font-black mb-1" data-count="12">0</div>
+                        <div class="text-xs uppercase tracking-widest text-gray-400" style="font-family:'Barlow',sans-serif;font-size:11px;letter-spacing:0.1em;">Years Experience</div>
                     </div>
                 </div>
-            </div>
-            <div class="owl-carousel-item position-relative">
-                <img class="img-fluid" src="img/carousel-3.png" alt="">
-                <div class="position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center" style="background: rgba(53, 53, 53, .7);">
-                    <div class="container">
-                        <div class="row justify-content-center">
-                            <div class="col-12 col-lg-8 text-center">
-                                
-                                <h1 class="display-3 text-white animated slideInDown mb-4">Beyond <span style="color: #D65076;">Protection</span>: Empowering Peace of Mind</h1>
-                                <p class="fs-5 fw-medium text-white mb-4 pb-2">At Beyond Protection, we understand that true security goes beyond just safeguarding physical assets; it encompasses providing our valued clients with the invaluable gift of peace of mind. With our cutting-edge security solutions and unwavering commitment to excellence, we strive to empower you with a sense of tranquility in an ever-changing world.</p>
-                                
-                                
-                            </div>
+
+                <!-- Text -->
+                <div class="reveal" data-delay="0.15">
+                    <p class="text-primary font-barlow font-bold tracking-[0.25em] text-xs uppercase flex items-center gap-4 mb-6">
+                        <span class="w-8 h-[1px] bg-primary block"></span>The Agency
+                    </p>
+                    <h2 class="text-4xl sm:text-5xl lg:text-6xl font-barlow font-black text-gray-900 dark:text-white leading-[1.05] mb-4 tracking-tight">
+                        We Engineer
+                    </h2>
+                    <h2 class="text-4xl sm:text-5xl lg:text-6xl font-serif-it text-gray-400 dark:text-gray-500 leading-[1.05] mb-8 tracking-tight">
+                        Environments.
+                    </h2>
+                    <p class="text-gray-600 dark:text-gray-400 text-lg leading-relaxed mb-12 font-light">
+                        At Moonlight Enterprises, we blend cutting-edge technology with architectural precision. Total solution provider for HVAC, Electrical, and IBMS services — designed for those who demand uncompromising quality.
+                    </p>
+
+                    <div class="grid grid-cols-2 gap-8 mb-12 border-t border-gray-200 dark:border-darkBorder pt-10">
+                        <div>
+                            <h3 class="text-5xl font-barlow font-black text-gray-900 dark:text-white mb-2">
+                                <span data-count="1500">0</span>+
+                            </h3>
+                            <p class="text-xs uppercase tracking-widest text-gray-500 font-barlow font-bold" style="letter-spacing:0.1em;">Happy Clients</p>
                         </div>
+                        <div>
+                            <h3 class="text-5xl font-barlow font-black text-gray-900 dark:text-white mb-2">
+                                <span data-count="2000">0</span>+
+                            </h3>
+                            <p class="text-xs uppercase tracking-widest text-gray-500 font-barlow font-bold" style="letter-spacing:0.1em;">Projects Done</p>
+                        </div>
+                    </div>
+
+                    <a href="#services" class="group inline-flex items-center gap-4 text-sm font-barlow font-bold tracking-widest uppercase">
+                        Explore Our Expertise
+                        <span class="w-10 h-10 flex items-center justify-center border border-gray-300 dark:border-gray-700 group-hover:bg-primary group-hover:border-primary group-hover:text-white transition-all duration-300">
+                            <i class="fas fa-arrow-right -rotate-45 group-hover:rotate-0 transition-transform duration-300 text-sm"></i>
+                        </span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════
+         SERVICES
+    ═══════════════════════════════════════════ -->
+    <section class="py-24 lg:py-32 bg-gray-50 dark:bg-darkCard" id="services">
+        <div class="container mx-auto px-6 lg:px-12">
+            <div class="flex flex-col md:flex-row justify-between items-end mb-16 lg:mb-20 reveal">
+                <div class="max-w-2xl">
+                    <h2 class="text-5xl lg:text-7xl font-barlow font-black text-gray-900 dark:text-white tracking-tight mb-3">Capabilities.</h2>
+                    <p class="text-gray-600 dark:text-gray-400 text-lg font-light">Comprehensive infrastructure solutions delivered with precision.</p>
+                </div>
+                <a href="contact.html" class="hidden md:inline-flex mt-8 md:mt-0 items-center gap-3 text-sm font-barlow font-bold tracking-widest uppercase hover:text-primary transition-colors">
+                    Discuss a project <i class="fas fa-arrow-right text-xs"></i>
+                </a>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
+
+                <div class="service-card group cursor-pointer reveal" data-delay="0.05">
+                    <div class="text-4xl text-gray-200 dark:text-gray-800 font-barlow font-black mb-6 group-hover:text-primary transition-colors duration-300">01</div>
+                    <h4 class="text-xl font-barlow font-bold text-gray-900 dark:text-white mb-4">Fire Alarm Systems</h4>
+                    <p class="service-desc text-gray-500 dark:text-gray-400 font-light mb-6 opacity-0 group-hover:opacity-100 transform translate-y-3 group-hover:translate-y-0 transition-all duration-500 text-sm leading-relaxed">Design, installation, and maintenance ensuring early detection and full safety compliance.</p>
+                    <div class="w-10 h-10 flex items-center justify-center border border-gray-200 dark:border-gray-800 group-hover:bg-primary group-hover:text-white group-hover:border-primary transition-all duration-300">
+                        <i class="fas fa-arrow-right -rotate-45 group-hover:rotate-0 transition-transform duration-300 text-xs"></i>
+                    </div>
+                </div>
+
+                <div class="service-card group cursor-pointer reveal" data-delay="0.1">
+                    <div class="text-4xl text-gray-200 dark:text-gray-800 font-barlow font-black mb-6 group-hover:text-primary transition-colors duration-300">02</div>
+                    <h4 class="text-xl font-barlow font-bold text-gray-900 dark:text-white mb-4">CCTV Surveillance</h4>
+                    <p class="service-desc text-gray-500 dark:text-gray-400 font-light mb-6 opacity-0 group-hover:opacity-100 transform translate-y-3 group-hover:translate-y-0 transition-all duration-500 text-sm leading-relaxed">Advanced surveillance systems delivering crisp HD footage and comprehensive monitoring round-the-clock.</p>
+                    <div class="w-10 h-10 flex items-center justify-center border border-gray-200 dark:border-gray-800 group-hover:bg-primary group-hover:text-white group-hover:border-primary transition-all duration-300">
+                        <i class="fas fa-arrow-right -rotate-45 group-hover:rotate-0 transition-transform duration-300 text-xs"></i>
+                    </div>
+                </div>
+
+                <div class="service-card group cursor-pointer reveal" data-delay="0.15">
+                    <div class="text-4xl text-gray-200 dark:text-gray-800 font-barlow font-black mb-6 group-hover:text-primary transition-colors duration-300">03</div>
+                    <h4 class="text-xl font-barlow font-bold text-gray-900 dark:text-white mb-4">Access Control</h4>
+                    <p class="service-desc text-gray-500 dark:text-gray-400 font-light mb-6 opacity-0 group-hover:opacity-100 transform translate-y-3 group-hover:translate-y-0 transition-all duration-500 text-sm leading-relaxed">Biometric and card-based systems regulating and monitoring entry to every secure area.</p>
+                    <div class="w-10 h-10 flex items-center justify-center border border-gray-200 dark:border-gray-800 group-hover:bg-primary group-hover:text-white group-hover:border-primary transition-all duration-300">
+                        <i class="fas fa-arrow-right -rotate-45 group-hover:rotate-0 transition-transform duration-300 text-xs"></i>
+                    </div>
+                </div>
+
+                <div class="service-card group cursor-pointer reveal" data-delay="0.05">
+                    <div class="text-4xl text-gray-200 dark:text-gray-800 font-barlow font-black mb-6 group-hover:text-primary transition-colors duration-300">04</div>
+                    <h4 class="text-xl font-barlow font-bold text-gray-900 dark:text-white mb-4">Security Alarms</h4>
+                    <p class="service-desc text-gray-500 dark:text-gray-400 font-light mb-6 opacity-0 group-hover:opacity-100 transform translate-y-3 group-hover:translate-y-0 transition-all duration-500 text-sm leading-relaxed">Intelligent burglar and intruder alarm systems delivering 24/7 robust protection.</p>
+                    <div class="w-10 h-10 flex items-center justify-center border border-gray-200 dark:border-gray-800 group-hover:bg-primary group-hover:text-white group-hover:border-primary transition-all duration-300">
+                        <i class="fas fa-arrow-right -rotate-45 group-hover:rotate-0 transition-transform duration-300 text-xs"></i>
+                    </div>
+                </div>
+
+                <div class="service-card group cursor-pointer reveal" data-delay="0.1">
+                    <div class="text-4xl text-gray-200 dark:text-gray-800 font-barlow font-black mb-6 group-hover:text-primary transition-colors duration-300">05</div>
+                    <h4 class="text-xl font-barlow font-bold text-gray-900 dark:text-white mb-4">HVAC Systems</h4>
+                    <p class="service-desc text-gray-500 dark:text-gray-400 font-light mb-6 opacity-0 group-hover:opacity-100 transform translate-y-3 group-hover:translate-y-0 transition-all duration-500 text-sm leading-relaxed">Precision air conditioning and ventilation design, installation and annual maintenance contracts.</p>
+                    <div class="w-10 h-10 flex items-center justify-center border border-gray-200 dark:border-gray-800 group-hover:bg-primary group-hover:text-white group-hover:border-primary transition-all duration-300">
+                        <i class="fas fa-arrow-right -rotate-45 group-hover:rotate-0 transition-transform duration-300 text-xs"></i>
+                    </div>
+                </div>
+
+                <div class="service-card group cursor-pointer reveal" data-delay="0.15">
+                    <div class="text-4xl text-gray-200 dark:text-gray-800 font-barlow font-black mb-6 group-hover:text-primary transition-colors duration-300">06</div>
+                    <h4 class="text-xl font-barlow font-bold text-gray-900 dark:text-white mb-4">PA & Intercom</h4>
+                    <p class="service-desc text-gray-500 dark:text-gray-400 font-light mb-6 opacity-0 group-hover:opacity-100 transform translate-y-3 group-hover:translate-y-0 transition-all duration-500 text-sm leading-relaxed">Public address and intercom systems engineered for seamless enterprise communication.</p>
+                    <div class="w-10 h-10 flex items-center justify-center border border-gray-200 dark:border-gray-800 group-hover:bg-primary group-hover:text-white group-hover:border-primary transition-all duration-300">
+                        <i class="fas fa-arrow-right -rotate-45 group-hover:rotate-0 transition-transform duration-300 text-xs"></i>
                     </div>
                 </div>
             </div>
         </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════
+         FULL-BLEED BREAK
+    ═══════════════════════════════════════════ -->
+    <div class="h-[50vh] lg:h-[60vh] w-full bg-black relative overflow-hidden flex items-center justify-center">
+        <img src="img/carousel-3.png" alt="" class="absolute inset-0 w-full h-full object-cover opacity-50" loading="lazy" aria-hidden="true">
+        <div class="absolute inset-0 bg-black/40"></div>
+        <h2 class="relative z-10 text-4xl sm:text-6xl lg:text-8xl font-barlow font-black text-white text-outline tracking-tight text-center px-6 reveal">
+            BEYOND <span class="font-serif-it" style="-webkit-text-stroke:0;color:white;">PROTECTION</span>
+        </h2>
     </div>
-    <!-- Carousel End -->
 
+    <!-- ═══════════════════════════════════════════
+         PROJECTS
+    ═══════════════════════════════════════════ -->
+    <section class="py-24 lg:py-32 bg-white dark:bg-darkBg" id="projects">
+        <div class="container mx-auto px-6 lg:px-12">
+            <h2 class="text-5xl lg:text-7xl font-barlow font-black text-gray-900 dark:text-white tracking-tight mb-12 reveal">Selected Works.</h2>
 
-    <!-- Feature Start -->
-    <div class="container-xxl py-5">
-        <div class="container">
-            <div class="row g-5">
-                <div class="col-md-6 col-lg-3 wow fadeIn" data-wow-delay="0.1s">
-                    <div class="d-flex align-items-center justify-content-between mb-2">
-                        <div class="d-flex align-items-center justify-content-center bg-light" style="width: 60px; height: 60px;">
-                            <i class="fa fa-user-check fa-2x text-primary"></i>
+            <div class="mb-16 border-b border-gray-200 dark:border-darkBorder pb-6 reveal" data-delay="0.1">
+                <ul id="portfolio-filters" class="flex flex-wrap gap-8 text-xs font-barlow font-bold tracking-widest uppercase text-gray-400" style="letter-spacing:0.1em;">
+                    <li class="filter-active text-gray-900 dark:text-white" data-filter="all">All Work</li>
+                    <li class="hover:text-gray-900 dark:hover:text-white transition-colors" data-filter="banking">Banking Sector</li>
+                    <li class="hover:text-gray-900 dark:hover:text-white transition-colors" data-filter="private">Private Sector</li>
+                </ul>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12">
+
+                <div class="portfolio-item banking reveal" data-delay="0.05">
+                    <div class="group relative overflow-hidden aspect-[4/3] cursor-pointer">
+                        <img src="img/portfolio-1.png" alt="Bank of Maharashtra" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" loading="lazy">
+                        <div class="portfolio-overlay absolute inset-0 p-8 flex flex-col justify-end">
+                            <div class="portfolio-text">
+                                <p class="text-primary font-barlow font-bold tracking-widest text-xs uppercase mb-2" style="letter-spacing:0.12em;">Banking Sector</p>
+                                <h5 class="text-2xl font-barlow font-bold text-white mb-1">Bank of Maharashtra</h5>
+                                <p class="text-gray-300 font-light text-sm">CCTV & Bio-ACS Integration</p>
+                            </div>
+                            <a href="img/portfolio-1.png" data-lightbox="portfolio" aria-label="View project" class="absolute top-8 right-8 w-10 h-10 bg-white/10 backdrop-blur-md flex items-center justify-center text-white border border-white/20 hover:bg-primary hover:border-primary transition-all duration-300">
+                                <i class="fas fa-expand-alt text-sm"></i>
+                            </a>
                         </div>
-                        <h1 class="display-1 text-light mb-0">01</h1>
                     </div>
-                    <h5>Security-Experts</h5>
                 </div>
-                <div class="col-md-6 col-lg-3 wow fadeIn" data-wow-delay="0.3s">
-                    <div class="d-flex align-items-center justify-content-between mb-2">
-                        <div class="d-flex align-items-center justify-content-center bg-light" style="width: 60px; height: 60px;">
-                            <i class="fa fa-check fa-2x text-primary"></i>
+
+                <div class="portfolio-item private reveal md:mt-20" data-delay="0.1">
+                    <div class="group relative overflow-hidden aspect-[4/3] cursor-pointer">
+                        <img src="img/portfolio-2.png" alt="Nityanand Milk Agency" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" loading="lazy">
+                        <div class="portfolio-overlay absolute inset-0 p-8 flex flex-col justify-end">
+                            <div class="portfolio-text">
+                                <p class="text-primary font-barlow font-bold tracking-widest text-xs uppercase mb-2" style="letter-spacing:0.12em;">Private Sector</p>
+                                <h5 class="text-2xl font-barlow font-bold text-white mb-1">Nityanand Milk Agency</h5>
+                                <p class="text-gray-300 font-light text-sm">AMC for CCTV Systems</p>
+                            </div>
+                            <a href="img/portfolio-2.png" data-lightbox="portfolio" aria-label="View project" class="absolute top-8 right-8 w-10 h-10 bg-white/10 backdrop-blur-md flex items-center justify-center text-white border border-white/20 hover:bg-primary hover:border-primary transition-all duration-300">
+                                <i class="fas fa-expand-alt text-sm"></i>
+                            </a>
                         </div>
-                        <h1 class="display-1 text-light mb-0">02</h1>
                     </div>
-                    <h5>Quality Products</h5>
                 </div>
-                <div class="col-md-6 col-lg-3 wow fadeIn" data-wow-delay="0.5s">
-                    <div class="d-flex align-items-center justify-content-between mb-2">
-                        <div class="d-flex align-items-center justify-content-center bg-light" style="width: 60px; height: 60px;">
-                            <i class="fa fa-drafting-compass fa-2x text-primary"></i>
+
+                <div class="portfolio-item banking reveal" data-delay="0.05">
+                    <div class="group relative overflow-hidden aspect-[4/3] cursor-pointer">
+                        <img src="img/portfolio-3.png" alt="Canara Bank" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" loading="lazy">
+                        <div class="portfolio-overlay absolute inset-0 p-8 flex flex-col justify-end">
+                            <div class="portfolio-text">
+                                <p class="text-primary font-barlow font-bold tracking-widest text-xs uppercase mb-2" style="letter-spacing:0.12em;">Banking Sector</p>
+                                <h5 class="text-2xl font-barlow font-bold text-white mb-1">Canara Bank</h5>
+                                <p class="text-gray-300 font-light text-sm">Fire Alarms & Access Control</p>
+                            </div>
+                            <a href="img/portfolio-3.png" data-lightbox="portfolio" aria-label="View project" class="absolute top-8 right-8 w-10 h-10 bg-white/10 backdrop-blur-md flex items-center justify-center text-white border border-white/20 hover:bg-primary hover:border-primary transition-all duration-300">
+                                <i class="fas fa-expand-alt text-sm"></i>
+                            </a>
                         </div>
-                        <h1 class="display-1 text-light mb-0">03</h1>
                     </div>
-                    <h5>Free Consultation</h5>
                 </div>
-                <div class="col-md-6 col-lg-3 wow fadeIn" data-wow-delay="0.7s">
-                    <div class="d-flex align-items-center justify-content-between mb-2">
-                        <div class="d-flex align-items-center justify-content-center bg-light" style="width: 60px; height: 60px;">
-                            <i class="fa fa-headphones fa-2x text-primary"></i>
+
+                <div class="portfolio-item private reveal md:mt-20" data-delay="0.1">
+                    <div class="group relative overflow-hidden aspect-[4/3] cursor-pointer">
+                        <img src="img/portfolio-4.png" alt="Golden Co-op" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" loading="lazy">
+                        <div class="portfolio-overlay absolute inset-0 p-8 flex flex-col justify-end">
+                            <div class="portfolio-text">
+                                <p class="text-primary font-barlow font-bold tracking-widest text-xs uppercase mb-2" style="letter-spacing:0.12em;">Private Sector</p>
+                                <h5 class="text-2xl font-barlow font-bold text-white mb-1">Golden Co-op Hsg Soc</h5>
+                                <p class="text-gray-300 font-light text-sm">Surveillance Setup</p>
+                            </div>
+                            <a href="img/portfolio-4.png" data-lightbox="portfolio" aria-label="View project" class="absolute top-8 right-8 w-10 h-10 bg-white/10 backdrop-blur-md flex items-center justify-center text-white border border-white/20 hover:bg-primary hover:border-primary transition-all duration-300">
+                                <i class="fas fa-expand-alt text-sm"></i>
+                            </a>
                         </div>
-                        <h1 class="display-1 text-light mb-0">04</h1>
                     </div>
-                    <h5>Customer Support</h5>
                 </div>
+            </div>
+
+            <div class="text-center mt-16">
+                <a href="contact.html" class="btn-outline-dark inline-flex">Start a Project</a>
             </div>
         </div>
-    </div>
-    <!-- Feature Start -->
+    </section>
 
+    <!-- ═══════════════════════════════════════════
+         TESTIMONIALS
+    ═══════════════════════════════════════════ -->
+    <section class="py-24 lg:py-32 bg-gray-50 dark:bg-darkCard border-y border-gray-200 dark:border-darkBorder">
+        <div class="container mx-auto px-6 lg:px-12">
+            <div class="flex flex-col md:flex-row gap-8 items-start justify-between mb-14 reveal">
+                <h2 class="text-4xl lg:text-5xl font-barlow font-black text-gray-900 dark:text-white tracking-tight">Client Voices.</h2>
+                <p class="text-gray-600 dark:text-gray-400 font-light max-w-sm md:text-right text-sm leading-relaxed">Don't just take our word for it. Hear from enterprises that trust us to secure their future.</p>
+            </div>
 
+            <div class="testimonial-slider reveal" data-delay="0.1">
+                <div class="testimonial-track">
 
-    <!-- About Start -->
-    <div class="container-fluid bg-light overflow-hidden my-5 px-lg-0" id="about">
-        <div class="container about px-lg-0">
-            <div class="row g-0 mx-lg-0">
-                <div class="col-lg-6 ps-lg-0" style="min-height: 400px;">
-                    <div class="position-relative h-100">
-                        <img class="position-absolute img-fluid w-100 h-100" src="img/about-us.png" style="object-fit: cover;" alt="">
-                    </div>
-                </div>
-                <div class="col-lg-6 about-text py-5 wow fadeIn" data-wow-delay="0.5s">
-                    <div class="p-lg-5 pe-lg-0">
-                        <div class="section-title text-start">
-                            <h1 class="display-5 mb-4">About Us</h1>
-                        </div>
-                        <p class="mb-4 pb-2">At Moonlight Enterprises, we take pride in being a total solution provider for HVAC, Electrical, and IBMS services. With a qualified and experienced management team, we offer consultancy, contracting, and service solutions for all your air-conditioning and security system requirements. Our expertise lies in comfort air conditioning, ventilation systems, fire alarm systems, CCTV surveillance, access control systems, and more.</p>
-                        <div class="row g-4 mb-4 pb-2">
-                            <div class="col-sm-6 wow fadeIn" data-wow-delay="0.1s">
-                                <div class="d-flex align-items-center">
-                                    <div class="d-flex flex-shrink-0 align-items-center justify-content-center bg-white" style="width: 60px; height: 60px;">
-                                        <i class="fa fa-users fa-2x text-primary"></i>
-                                    </div>
-                                    <div class="ms-3">
-                                        <h2 class="text-primary mb-1" data-toggle="counter-up">1500</h2>
-                                        <p class="fw-medium mb-0">Happy Clients</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-sm-6 wow fadeIn" data-wow-delay="0.3s">
-                                <div class="d-flex align-items-center">
-                                    <div class="d-flex flex-shrink-0 align-items-center justify-content-center bg-white" style="width: 60px; height: 60px;">
-                                        <i class="fa fa-check fa-2x text-primary"></i>
-                                    </div>
-                                    <div class="ms-3">
-                                        <h2 class="text-primary mb-1" data-toggle="counter-up">2000</h2>
-                                        <p class="fw-medium mb-0">Projects Done</p>
-                                    </div>
+                    <div class="testimonial-slide">
+                        <div class="p-8 lg:p-10 bg-white dark:bg-darkBg flex flex-col border border-gray-100 dark:border-gray-800 h-full">
+                            <i class="fas fa-quote-left text-4xl text-gray-100 dark:text-gray-800 mb-6"></i>
+                            <p class="text-lg lg:text-xl font-serif-it text-gray-900 dark:text-white leading-snug mb-8 flex-grow">
+                                "Moonlight Enterprises installed our CCTV system promptly and professionally. The team was knowledgeable and the quality of equipment is excellent."
+                            </p>
+                            <div class="flex items-center gap-4 mt-auto">
+                                <img src="img/testimonial-1.png" alt="Rajesh Sharma" class="w-12 h-12 object-cover grayscale" loading="lazy">
+                                <div>
+                                    <h5 class="text-xs font-barlow font-bold text-gray-900 dark:text-white tracking-wider uppercase">Rajesh Sharma</h5>
+                                    <span class="text-xs text-gray-500 font-barlow">Bank Manager</span>
                                 </div>
                             </div>
                         </div>
-                        <a href="" class="btn btn-primary py-3 px-5">Explore More</a>
                     </div>
+
+                    <div class="testimonial-slide">
+                        <div class="p-8 lg:p-10 bg-white dark:bg-darkBg flex flex-col border border-gray-100 dark:border-gray-800 h-full">
+                            <i class="fas fa-quote-left text-4xl text-gray-100 dark:text-gray-800 mb-6"></i>
+                            <p class="text-lg lg:text-xl font-serif-it text-gray-900 dark:text-white leading-snug mb-8 flex-grow">
+                                "We've relied on Moonlight for our fire alarm AMC for over a decade. Their response time and expertise are unmatched. True professionals."
+                            </p>
+                            <div class="flex items-center gap-4 mt-auto">
+                                <img src="img/testimonial-2.png" alt="Priya Nair" class="w-12 h-12 object-cover grayscale" loading="lazy">
+                                <div>
+                                    <h5 class="text-xs font-barlow font-bold text-gray-900 dark:text-white tracking-wider uppercase">Priya Nair</h5>
+                                    <span class="text-xs text-gray-500 font-barlow">Society Secretary</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="testimonial-slide">
+                        <div class="p-8 lg:p-10 bg-white dark:bg-darkBg flex flex-col border border-gray-100 dark:border-gray-800 h-full">
+                            <i class="fas fa-quote-left text-4xl text-gray-100 dark:text-gray-800 mb-6"></i>
+                            <p class="text-lg lg:text-xl font-serif-it text-gray-900 dark:text-white leading-snug mb-8 flex-grow">
+                                "Outstanding service on our biometric access control system. Installation was clean and the team explained everything clearly."
+                            </p>
+                            <div class="flex items-center gap-4 mt-auto">
+                                <img src="img/testimonial-3.png" alt="Ankit Mehta" class="w-12 h-12 object-cover grayscale" loading="lazy">
+                                <div>
+                                    <h5 class="text-xs font-barlow font-bold text-gray-900 dark:text-white tracking-wider uppercase">Ankit Mehta</h5>
+                                    <span class="text-xs text-gray-500 font-barlow">Operations Manager</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="testimonial-slide">
+                        <div class="p-8 lg:p-10 bg-white dark:bg-darkBg flex flex-col border border-gray-100 dark:border-gray-800 h-full">
+                            <i class="fas fa-quote-left text-4xl text-gray-100 dark:text-gray-800 mb-6"></i>
+                            <p class="text-lg lg:text-xl font-serif-it text-gray-900 dark:text-white leading-snug mb-8 flex-grow">
+                                "Their HVAC solution transformed our office completely. Energy efficient, quiet, and perfectly installed. Highly recommend."
+                            </p>
+                            <div class="flex items-center gap-4 mt-auto">
+                                <img src="img/testimonial-4.png" alt="Sunita Patel" class="w-12 h-12 object-cover grayscale" loading="lazy">
+                                <div>
+                                    <h5 class="text-xs font-barlow font-bold text-gray-900 dark:text-white tracking-wider uppercase">Sunita Patel</h5>
+                                    <span class="text-xs text-gray-500 font-barlow">HR Director</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
                 </div>
+            </div>
+
+            <div class="flex justify-end gap-3 mt-8">
+                <button class="testimonial-prev w-11 h-11 border border-gray-200 dark:border-gray-800 flex items-center justify-center text-gray-700 dark:text-gray-300 hover:bg-primary hover:text-white hover:border-primary transition-all duration-300" aria-label="Previous">
+                    <i class="fas fa-arrow-left text-sm"></i>
+                </button>
+                <button class="testimonial-next w-11 h-11 border border-gray-200 dark:border-gray-800 flex items-center justify-center text-gray-700 dark:text-gray-300 hover:bg-primary hover:text-white hover:border-primary transition-all duration-300" aria-label="Next">
+                    <i class="fas fa-arrow-right text-sm"></i>
+                </button>
             </div>
         </div>
-    </div>
-    <!-- About End -->
+    </section>
 
+    <!-- ═══════════════════════════════════════════
+         FOOTER
+    ═══════════════════════════════════════════ -->
+    <footer class="bg-white dark:bg-darkBg pt-24 lg:pt-32 pb-10">
+        <div class="container mx-auto px-6 lg:px-12">
 
-    <!-- Service Start -->
-    <div class="container-xxl py-5" id="services">
-        <div class="container">
-            <div class="section-title text-center">
-                <h1 class="display-5 ">Our Services</h1>
+            <div class="flex flex-col md:flex-row justify-between items-start md:items-end mb-20 border-b border-gray-200 dark:border-darkBorder pb-16">
+                <div class="mb-8 md:mb-0 reveal reveal-left">
+                    <h2 class="text-5xl sm:text-6xl lg:text-8xl font-barlow font-black tracking-tight text-gray-900 dark:text-white leading-[0.9]">
+                        HAVE AN
+                    </h2>
+                    <h2 class="text-5xl sm:text-6xl lg:text-8xl font-serif-it text-gray-400 dark:text-gray-600 leading-[0.9]">
+                        idea?
+                    </h2>
+                </div>
+                <a href="contact.html" class="btn-primary-solid reveal reveal-right" style="font-size:13px;padding:16px 32px;">
+                    Let's Talk
+                    <svg width="14" height="14" viewBox="0 0 16 16" fill="none">
+                        <path d="M3 8H13M13 8L9 4M13 8L9 12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </a>
             </div>
-            <div class="row g-4">
-                <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.1s">
-                    <div class="service-item">
-                        <div class="overflow-hidden">
-                            <img class="img-fluid" src="img/service-1.png" alt="">
-                        </div>
-                        <div class="p-4 text-center border border-5 border-light border-top-0">
-                            <h4 class="mb-3">Fire Alarm Systems</h4>
-                            <p>We provide design, installation, and maintenance services for fire alarm systems to ensure early detection and prompt response in case of fire emergencies.</p>
-                            <a class="fw-medium" href="">Read More<i class="fa fa-arrow-right ms-2"></i></a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.3s">
-                    <div class="service-item">
-                        <div class="overflow-hidden">
-                            <img class="img-fluid" src="img/service-2.png" alt="">
-                        </div>
-                        <div class="p-4 text-center border border-5 border-light border-top-0">
-                            <h4 class="mb-3">CCTV Surveillance Systems</h4>
-                            <p>Our team specializes in the installation and integration of CCTV surveillance systems for enhanced security and monitoring of your premises.</p>
-                            <a class="fw-medium" href="">Read More<i class="fa fa-arrow-right ms-2"></i></a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.5s">
-                    <div class="service-item">
-                        <div class="overflow-hidden">
-                            <img class="img-fluid" src="img/service-3.png" alt="">
-                        </div>
-                        <div class="p-4 text-center border border-5 border-light border-top-0">
-                            <h4 class="mb-3">Access Control Systems</h4>
-                            <p>We offer access control solutions that enable authorized personnel to enter restricted areas, enhancing security and preventing unauthorized access.</p>
-                            <a class="fw-medium" href="">Read More<i class="fa fa-arrow-right ms-2"></i></a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.1s">
-                    <div class="service-item">
-                        <div class="overflow-hidden">
-                            <img class="img-fluid" src="img/service-4.png" alt="">
-                        </div>
-                        <div class="p-4 text-center border border-5 border-light border-top-0">
-                            <h4 class="mb-3">P.A. (Public Address) Systems</h4>
-                            <p>We provide P.A. systems for effective communication and announcements in various settings, such as offices, schools, and public spaces.</p>
-                            <a class="fw-medium" href="">Read More<i class="fa fa-arrow-right ms-2"></i></a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.3s">
-                    <div class="service-item">
-                        <div class="overflow-hidden">
-                            <img class="img-fluid" src="img/service-5.png" alt="">
-                        </div>
-                        <div class="p-4 text-center border border-5 border-light border-top-0">
-                            <h4 class="mb-3">Video Door Phone Systems</h4>
-                            <p>Our video door phone systems allow you to visually identify visitors before granting them access to your premises, enhancing security and convenience.</p>
-                            <a class="fw-medium" href="">Read More<i class="fa fa-arrow-right ms-2"></i></a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.5s">
-                    <div class="service-item">
-                        <div class="overflow-hidden">
-                            <img class="img-fluid" src="img/service-6.png" alt="">
-                        </div>
-                        <div class="p-4 text-center border border-5 border-light border-top-0">
-                            <h4 class="mb-3">Burglar Alarm System</h4>
-                            <p>We offer burglar alarm systems to protect your property against unauthorized entry and theft, providing peace of mind.</p>
-                            <a class="fw-medium" href="">Read More<i class="fa fa-arrow-right ms-2"></i></a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- Service End -->
 
-
-    <!-- Feature Start -->
-    <div class="container-fluid bg-light overflow-hidden my-5 px-lg-0">
-        <div class="container feature px-lg-0">
-            <div class="row g-0 mx-lg-0">
-                <div class="col-lg-6 feature-text py-5 wow fadeIn" data-wow-delay="0.5s">
-                    <div class="p-lg-5 ps-lg-0">
-                        <div class="section-title text-start">
-                            <h1 class="display-5 mb-4">Why Choose Us</h1>
-                        </div>
-                        <p class="mb-4 pb-2">Whether you require consultancy, execution, or maintenance services, our experienced team is dedicated to delivering high-quality solutions tailored to your specific requirements.</p>
-                        <div class="row g-4">
-                            <div class="col-6">
-                                <div class="d-flex align-items-center">
-                                    <div class="d-flex flex-shrink-0 align-items-center justify-content-center bg-white" style="width: 60px; height: 60px;">
-                                        <i class="fa fa-check fa-2x text-primary"></i>
-                                    </div>
-                                    <div class="ms-4">
-                                        <p class="mb-2">Quality</p>
-                                        <h5 class="mb-0">Services</h5>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-6">
-                                <div class="d-flex align-items-center">
-                                    <div class="d-flex flex-shrink-0 align-items-center justify-content-center bg-white" style="width: 60px; height: 60px;">
-                                        <i class="fa fa-user-check fa-2x text-primary"></i>
-                                    </div>
-                                    <div class="ms-4">
-                                        <p class="mb-2">Creative</p>
-                                        <h5 class="mb-0">Engineers</h5>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-6">
-                                <div class="d-flex align-items-center">
-                                    <div class="d-flex flex-shrink-0 align-items-center justify-content-center bg-white" style="width: 60px; height: 60px;">
-                                        <i class="fa fa-drafting-compass fa-2x text-primary"></i>
-                                    </div>
-                                    <div class="ms-4">
-                                        <p class="mb-2">Free</p>
-                                        <h5 class="mb-0">Consultation</h5>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-6">
-                                <div class="d-flex align-items-center">
-                                    <div class="d-flex flex-shrink-0 align-items-center justify-content-center bg-white" style="width: 60px; height: 60px;">
-                                        <i class="fa fa-headphones fa-2x text-primary"></i>
-                                    </div>
-                                    <div class="ms-4">
-                                        <p class="mb-2">Customer</p>
-                                        <h5 class="mb-0">Support</h5>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
+                <div class="sm:col-span-2">
+                    <a href="index.html" class="nav-logo-text inline-block mb-6" style="color:inherit;">
+                        <span class="text-gray-900 dark:text-white font-barlow font-black text-3xl tracking-tight">M<span class="text-primary">E</span>.</span>
+                    </a>
+                    <p class="text-gray-500 dark:text-gray-400 font-light max-w-sm mb-8 text-sm leading-relaxed">Total solution provider for HVAC, Electrical and IBMS services. Consultancy, contracting and service excellence since 2011.</p>
+                    <div class="flex gap-3">
+                        <a href="#" aria-label="Facebook" class="w-9 h-9 border border-gray-200 dark:border-gray-800 flex items-center justify-center text-gray-700 dark:text-gray-300 hover:bg-primary hover:text-white hover:border-primary transition-all duration-300 text-sm">
+                            <i class="fab fa-facebook-f text-xs"></i>
+                        </a>
+                        <a href="#" aria-label="Twitter" class="w-9 h-9 border border-gray-200 dark:border-gray-800 flex items-center justify-center text-gray-700 dark:text-gray-300 hover:bg-primary hover:text-white hover:border-primary transition-all duration-300 text-sm">
+                            <i class="fab fa-twitter text-xs"></i>
+                        </a>
+                        <a href="#" aria-label="LinkedIn" class="w-9 h-9 border border-gray-200 dark:border-gray-800 flex items-center justify-center text-gray-700 dark:text-gray-300 hover:bg-primary hover:text-white hover:border-primary transition-all duration-300 text-sm">
+                            <i class="fab fa-linkedin-in text-xs"></i>
+                        </a>
                     </div>
                 </div>
-                <div class="col-lg-6 pe-lg-0" style="min-height: 400px;">
-                    <div class="position-relative h-100">
-                        <img class="position-absolute img-fluid w-100 h-100" src="img/features.png" style="object-fit: cover;" alt="">
-                    </div>
+
+                <div>
+                    <h4 class="font-barlow font-bold text-xs mb-6 text-gray-900 dark:text-white uppercase tracking-widest" style="letter-spacing:0.12em;">Explore</h4>
+                    <ul class="space-y-3 text-sm font-light text-gray-500 dark:text-gray-400">
+                        <li><a href="index.html" class="hover:text-primary transition-colors font-barlow">Home</a></li>
+                        <li><a href="#about"    class="hover:text-primary transition-colors font-barlow">About Us</a></li>
+                        <li><a href="#services" class="hover:text-primary transition-colors font-barlow">Services</a></li>
+                        <li><a href="#projects" class="hover:text-primary transition-colors font-barlow">Projects</a></li>
+                        <li><a href="contact.html" class="hover:text-primary transition-colors font-barlow">Contact</a></li>
+                    </ul>
                 </div>
-            </div>
-        </div>
-    </div>
-    <!-- Feature End -->
 
-
-    <!-- Projects Start -->
-    <div class="container-xxl py-5" id="projects">
-        <div class="container">
-            <div class="section-title text-center">
-                <h1 class="display-5 mb-5">Our Projects</h1>
-            </div>
-            <div class="row mt-n2 wow fadeInUp" data-wow-delay="0.3s">
-                <div class="col-12 text-center">
-                    <ul class="list-inline mb-5" id="portfolio-flters">
-                        <li class="mx-2 active" data-filter="*">All</li>
-                        <li class="mx-2" data-filter=".first">Banking Sector</li>
-                        <li class="mx-2" data-filter=".second">Private Sector</li>
+                <div>
+                    <h4 class="font-barlow font-bold text-xs mb-6 text-gray-900 dark:text-white uppercase tracking-widest" style="letter-spacing:0.12em;">Reach Out</h4>
+                    <ul class="space-y-4 text-sm font-light text-gray-500 dark:text-gray-400">
+                        <li class="flex items-start gap-3">
+                            <i class="fas fa-map-marker-alt text-primary mt-0.5 flex-shrink-0 text-xs"></i>
+                            <span class="font-barlow">411, Sainath Co-Op Society, Thane (W)</span>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <i class="fas fa-phone-alt text-primary flex-shrink-0 text-xs"></i>
+                            <a href="tel:+917715832047" class="hover:text-primary transition-colors font-barlow">+91 77158 32047</a>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <i class="fas fa-envelope text-primary mt-0.5 flex-shrink-0 text-xs"></i>
+                            <a href="mailto:moonlightenterprises2011@gmail.com" class="hover:text-primary transition-colors break-all font-barlow" style="font-size:12px;">moonlightenterprises2011@gmail.com</a>
+                        </li>
                     </ul>
                 </div>
             </div>
-            <div class="row g-4 portfolio-container">
-                <div class="col-lg-4 col-md-6 portfolio-item first wow fadeInUp" data-wow-delay="0.1s">
-                    <div class="rounded overflow-hidden">
-                        <div class="position-relative overflow-hidden">
-                            <img class="img-fluid w-100" src="img/portfolio-1.png" alt="">
-                            <div class="portfolio-overlay">
-                                <a class="btn btn-square btn-outline-light mx-1" href="img/portfolio-1.png" data-lightbox="portfolio"><i class="fa fa-eye"></i></a>
-                                <a class="btn btn-square btn-outline-light mx-1" href=""><i class="fa fa-link"></i></a>
-                            </div>
-                        </div>
-                        <div class="border border-5 border-light border-top-0 p-4">
-                            <p class="text-primary fw-medium mb-2">Bank of Maharashtra, Thane & Palghar Region</p>
-                            <h5 class="lh-base mb-0"> We provided AMC for their SAS (Security Alarm System), FAS (Fire Alarm System), CCTV, and Bio-ACS (Biometric Access Control System). We are providing service since 10 years.</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 portfolio-item second wow fadeInUp" data-wow-delay="0.3s">
-                    <div class="rounded overflow-hidden">
-                        <div class="position-relative overflow-hidden">
-                            <img class="img-fluid w-100" src="img/portfolio-2.png" alt="">
-                            <div class="portfolio-overlay">
-                                <a class="btn btn-square btn-outline-light mx-1" href="img/portfolio-2.png" data-lightbox="portfolio"><i class="fa fa-eye"></i></a>
-                                <a class="btn btn-square btn-outline-light mx-1" href=""><i class="fa fa-link"></i></a>
-                            </div>
-                        </div>
-                        <div class="border border-5 border-light border-top-0 p-4">
-                            <p class="text-primary fw-medium mb-2">Nityanand Milk Agency, Bharat Nagar & Tilak Nagar, Mumbai</p>
-                            <h5 class="lh-base mb-0">We provided Annual Maintenance Contracts (AMC) for their CCTV systems. Since 12 Years, till today.</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 portfolio-item first wow fadeInUp" data-wow-delay="0.5s">
-                    <div class="rounded overflow-hidden">
-                        <div class="position-relative overflow-hidden">
-                            <img class="img-fluid w-100" src="img/portfolio-3.png" alt="">
-                            <div class="portfolio-overlay">
-                                <a class="btn btn-square btn-outline-light mx-1" href="img/portfolio-3.png" data-lightbox="portfolio"><i class="fa fa-eye"></i></a>
-                                <a class="btn btn-square btn-outline-light mx-1" href=""><i class="fa fa-link"></i></a>
-                            </div>
-                        </div>
-                        <div class="border border-5 border-light border-top-0 p-4">
-                            <p class="text-primary fw-medium mb-2">Canara Bank</p>
-                            <h5 class="lh-base mb-0">We provided AMC for their SAS (Security Alarm System), FAS (Fire Alarm System), CCTV, and Bio-ACS (Biometric Access Control System). We are providing service since 8 years.</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 portfolio-item second wow fadeInUp" data-wow-delay="0.1s">
-                    <div class="rounded overflow-hidden">
-                        <div class="position-relative overflow-hidden">
-                            <img class="img-fluid w-100" src="img/portfolio-4.png" alt="">
-                            <div class="portfolio-overlay">
-                                <a class="btn btn-square btn-outline-light mx-1" href="img/portfolio-4.png" data-lightbox="portfolio"><i class="fa fa-eye"></i></a>
-                                <a class="btn btn-square btn-outline-light mx-1" href=""><i class="fa fa-link"></i></a>
-                            </div>
-                        </div>
-                        <div class="border border-5 border-light border-top-0 p-4">
-                            <p class="text-primary fw-medium mb-2">Golden Co-op-Hsg Soc Ltd, R-1 & R-2, Garodia Nagar, Ghatkopar (W)</p>
-                            <h5 class="lh-base mb-0">We provided AMC for their CCTV systems. From last 12 years, till today.</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 portfolio-item first wow fadeInUp" data-wow-delay="0.3s">
-                    <div class="rounded overflow-hidden">
-                        <div class="position-relative overflow-hidden">
-                            <img class="img-fluid w-100" src="img/portfolio-5.png" alt="">
-                            <div class="portfolio-overlay">
-                                <a class="btn btn-square btn-outline-light mx-1" href="img/portfolio-5.png" data-lightbox="portfolio"><i class="fa fa-eye"></i></a>
-                                <a class="btn btn-square btn-outline-light mx-1" href=""><i class="fa fa-link"></i></a>
-                            </div>
-                        </div>
-                        <div class="border border-5 border-light border-top-0 p-4">
-                            <p class="text-primary fw-medium mb-2">State Bank of India (SBI)</p>
-                            <h5 class="lh-base mb-0">We provided AMC for their FAS (Addressable-Fire Alarm System), and P.A System. We are providing service since 8 years.</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 portfolio-item second wow fadeInUp" data-wow-delay="0.5s">
-                    <div class="rounded overflow-hidden">
-                        <div class="position-relative overflow-hidden">
-                            <img class="img-fluid w-100" src="img/portfolio-6.jpg" alt="">
-                            <div class="portfolio-overlay">
-                                <a class="btn btn-square btn-outline-light mx-1" href="img/portfolio-6.jpg" data-lightbox="portfolio"><i class="fa fa-eye"></i></a>
-                                <a class="btn btn-square btn-outline-light mx-1" href=""><i class="fa fa-link"></i></a>
-                            </div>
-                        </div>
-                        <div class="border border-5 border-light border-top-0 p-4">
-                            <p class="text-primary fw-medium mb-2">Container Corporation India Ltd, Nahur - Mulund E (Railway Department)</p>
-                            <h5 class="lh-base mb-0">We provided AMC on a call basis for their fire alarm system.</a>
-                         </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 portfolio-item first wow fadeInUp" data-wow-delay="0.3s">
-                    <div class="rounded overflow-hidden">
-                        <div class="position-relative overflow-hidden">
-                            <img class="img-fluid w-100" src="img/portfolio-7.png" alt="">
-                            <div class="portfolio-overlay">
-                                <a class="btn btn-square btn-outline-light mx-1" href="img/portfolio-7.png" data-lightbox="portfolio"><i class="fa fa-eye"></i></a>
-                                <a class="btn btn-square btn-outline-light mx-1" href=""><i class="fa fa-link"></i></a>
-                            </div>
-                        </div>
-                        <div class="border border-5 border-light border-top-0 p-4">
-                            <p class="text-primary fw-medium mb-2">Dombivli Nagari Sahakari Bank Ltd.</p>
-                            <h5 class="lh-base mb-0">We provided Installation/AMC and Service for HVAC for 10 years.</a>
-                    </div>
-                </div>
 
-                                
+            <div class="flex flex-col sm:flex-row justify-between items-center gap-4 border-t border-gray-100 dark:border-darkBorder pt-8" style="font-family:'Barlow',sans-serif;font-size:11px;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;color:#9ca3af;">
+                <p>© 2024 Moonlight Enterprises. All rights reserved.</p>
+                <p>Crafted by <a href="https://zencoder.ai" target="_blank" rel="noopener" class="text-gray-900 dark:text-white hover:text-primary transition-colors">Zencoder</a></p>
             </div>
         </div>
-    </div>
-    <!-- Projects End -->
-
-    <!-- Testimonial Start -->
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-
-
-
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-
-    <div class="container-xxl py-5 wow fadeInUp" data-wow-delay="0.1s">
-        <div class="container">
-            <div class="section-title text-center">
-                <h1 class="display-5 mb-5">Testimonial</h1>
-            </div>
-            <div class="owl-carousel testimonial-carousel">
-                <div class="testimonial-item text-center">
-                    <img class="img-fluid bg-light p-2 mx-auto mb-3" src="img/testimonial-1.png" style="width: 200px; height: 200px;">
-                    <div class="testimonial-text text-center p-4">
-                        <p>Clita clita tempor justo dolor ipsum amet kasd amet duo justo duo duo labore sed sed. Magna ut diam sit et amet stet eos sed clita erat magna elitr erat sit sit erat at rebum justo sea clita.</p>
-                        <h5 class="mb-1">Client Name</h5>
-                        <span class="fst-italic">Profession</span>
-                    </div>
-                </div>
-                <div class="testimonial-item text-center">
-                    <img class="img-fluid bg-light p-2 mx-auto mb-3" src="img/testimonial-2.png" style="width: 200px; height: 200px;">
-                    <div class="testimonial-text text-center p-4">
-                        <p>Clita clita tempor justo dolor ipsum amet kasd amet duo justo duo duo labore sed sed. Magna ut diam sit et amet stet eos sed clita erat magna elitr erat sit sit erat at rebum justo sea clita.</p>
-                        <h5 class="mb-1">Client Name</h5>
-                        <span class="fst-italic">Profession</span>
-                    </div>
-                </div>
-                <div class="testimonial-item text-center">
-                    <img class="img-fluid bg-light p-2 mx-auto mb-3" src="img/testimonial-3.png" style="width: 200px; height: 200px;">
-                    <div class="testimonial-text text-center p-4">
-                        <p>Clita clita tempor justo dolor ipsum amet kasd amet duo justo duo duo labore sed sed. Magna ut diam sit et amet stet eos sed clita erat magna elitr erat sit sit erat at rebum justo sea clita.</p>
-                        <h5 class="mb-1">Client Name</h5>
-                        <span class="fst-italic">Profession</span>
-                    </div>
-                </div>
-                <div class="testimonial-item text-center">
-                    <img class="img-fluid bg-light p-2 mx-auto mb-3" src="img/testimonial-4.png" style="width: 200px; height: 200px;">
-                    <div class="testimonial-text text-center p-4">
-                        <p>Clita clita tempor justo dolor ipsum amet kasd amet duo justo duo duo labore sed sed. Magna ut diam sit et amet stet eos sed clita erat magna elitr erat sit sit erat at rebum justo sea clita.</p>
-                        <h5 class="mb-1">Client Name</h5>
-                        <span class="fst-italic">Profession</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- Testimonial End -->
-
-
-
-    
-    
-
-
-    <!-- Footer Start -->
-    <div class="container">
-        <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
-          <p class="col-md-4 mb-0 text-body-secondary">© 2023 Moonlight Enterprises, Inc</p>
-      
-          <a href="#" class="col-md-4 d-flex align-items-center justify-content-center mb-3 mb-md-0 me-md-auto link-body-emphasis text-decoration-none">
-            <svg class="bi me-2" width="40" height="32"><use xlink:href="#bootstrap"></use></svg>
-          </a>
-      
-          <ul class="nav col-md-4 justify-content-end">
-            <li class="nav-item"><a href="index.html" class="nav-link px-2 text-body-secondary">Home</a></li>
-            <li class="nav-item"><a href="#about" class="nav-link px-2 text-body-secondary">About</a></li>
-            <li class="nav-item"><a href="#services" class="nav-link px-2 text-body-secondary">Services</a></li>
-            <li class="nav-item"><a href="contact.html" class="nav-link px-2 text-body-secondary">Contact</a></li>
-          </ul>
-        </footer>
-      </div>
-    <!-- Footer End -->
-
+    </footer>
 
     <!-- Back to Top -->
-    <a href="#" class="btn btn-lg btn-primary btn-lg-square rounded-0 back-to-top"><i class="bi bi-arrow-up"></i></a>
+    <a href="#" class="back-to-top hidden fixed bottom-8 right-8 w-11 h-11 bg-primary text-white flex items-center justify-center hover:bg-primaryHover hover:scale-110 transition-all duration-300 z-50 shadow-lg" aria-label="Back to top">
+        <i class="fas fa-arrow-up text-sm"></i>
+    </a>
 
+    <!-- Native Lightbox -->
+    <dialog id="lightbox-modal" class="relative">
+        <button id="lightbox-close" aria-label="Close">
+            <i class="fas fa-times"></i>
+        </button>
+        <img id="lightbox-img" src="" alt="Project preview">
+    </dialog>
 
-    <!-- JavaScript Libraries -->
-    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="lib/wow/wow.min.js"></script>
-    <script src="lib/easing/easing.min.js"></script>
-    <script src="lib/waypoints/waypoints.min.js"></script>
-    <script src="lib/counterup/counterup.min.js"></script>
-    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
-    <script src="lib/isotope/isotope.pkgd.min.js"></script>
-    <script src="lib/lightbox/js/lightbox.min.js"></script>
-
-    <!-- Template Javascript -->
     <script src="js/main.js"></script>
 </body>
-
 </html>
