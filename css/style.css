@@ -39,14 +39,11 @@ h1, h2, h3, h4, h5, h6, .font-syne {
     align-items: center;
     justify-content: center;
     background: #050505;
-    opacity: 0;
-    visibility: hidden;
-    transition: opacity 0.7s ease, visibility 0s linear 0.7s;
+    transition: transform 0.8s cubic-bezier(0.85, 0, 0.15, 1);
+    will-change: transform;
 }
-#spinner.show {
-    opacity: 1;
-    visibility: visible;
-    transition: opacity 0.7s ease;
+#spinner.hide {
+    transform: translateY(-100%);
 }
 
 .preloader-logo {
@@ -176,7 +173,7 @@ html.dark .navbar-scrolled .nav-pill-wrap {
     text-decoration: none;
     padding: 7px 13px;
     border-radius: 999px;
-    transition: background-color 0.2s ease, color 0.2s ease;
+    transition: background-color 0.2s ease, color 0.2s ease, transform 0.25s cubic-bezier(0.23, 1, 0.32, 1);
     white-space: nowrap;
 }
 .nav-link:hover { background: rgba(255, 255, 255, 0.12); color: #ffffff; }
@@ -221,7 +218,7 @@ html.dark .navbar-scrolled .nav-logo-text { color: #ffffff; }
     border-radius: 999px;
     border: none;
     cursor: pointer;
-    transition: background-color 0.2s ease;
+    transition: background-color 0.2s ease, transform 0.25s cubic-bezier(0.23, 1, 0.32, 1);
     flex-shrink: 0;
 }
 .nav-btn:hover { background: #ffffff; }
@@ -245,6 +242,21 @@ html.dark .navbar-scrolled .nav-logo-text { color: #ffffff; }
 .navbar-scrolled .theme-toggle-btn { background: rgba(0,0,0,0.07); border-color: rgba(0,0,0,0.1); color: #444; }
 .navbar-scrolled .theme-toggle-btn:hover { background: rgba(0,0,0,0.12); }
 html.dark .navbar-scrolled .theme-toggle-btn { background: rgba(255,255,255,0.08); border-color: rgba(255,255,255,0.12); color: #ccc; }
+
+/* ── Marquee ─────────────────────────────────────────── */
+.marquee-track {
+    animation: marquee 30s linear infinite;
+}
+@keyframes marquee {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+}
+
+/* ── Magnetic & Interaction ──────────────────────────── */
+.magnetic {
+    display: inline-block;
+    transition: transform 0.3s cubic-bezier(0.23, 1, 0.32, 1);
+}
 
 /* ── Hero Section ─────────────────────────────────────── */
 .hero-video {
@@ -279,7 +291,7 @@ html.dark .navbar-scrolled .theme-toggle-btn { background: rgba(255,255,255,0.08
     padding: 4px;
     margin-bottom: 36px;
     cursor: default;
-    transition: background-color 0.2s ease;
+    transition: background-color 0.2s ease, transform 0.25s cubic-bezier(0.23, 1, 0.32, 1);
 }
 .hero-badge-outer:hover { background: rgba(255,255,255,0.16); }
 
@@ -292,7 +304,7 @@ html.dark .navbar-scrolled .theme-toggle-btn { background: rgba(255,255,255,0.08
     -webkit-backdrop-filter: blur(12px);
     border-radius: 999px;
     padding: 6px 18px;
-    transition: background-color 0.2s ease;
+    transition: background-color 0.2s ease, transform 0.25s cubic-bezier(0.23, 1, 0.32, 1);
 }
 .hero-badge-outer:hover .hero-badge-inner { background: rgba(255,255,255,1); }
 
@@ -422,7 +434,7 @@ html.dark .navbar-scrolled .theme-toggle-btn { background: rgba(255,255,255,0.08
     border-radius: 2px;
     border: none;
     cursor: pointer;
-    transition: background-color 0.2s ease;
+    transition: background-color 0.2s ease, transform 0.25s cubic-bezier(0.23, 1, 0.32, 1);
 }
 .btn-primary-solid:hover { background: #ffffff; }
 
@@ -442,7 +454,7 @@ html.dark .navbar-scrolled .theme-toggle-btn { background: rgba(255,255,255,0.08
     border-radius: 2px;
     backdrop-filter: blur(8px);
     -webkit-backdrop-filter: blur(8px);
-    transition: background-color 0.2s ease;
+    transition: background-color 0.2s ease, transform 0.25s cubic-bezier(0.23, 1, 0.32, 1);
 }
 .btn-ghost:hover { background: rgba(255, 255, 255, 0.18); }
 

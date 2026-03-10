@@ -42,7 +42,7 @@
     <div class="custom-cursor-dot hidden lg:block"></div>
 
     <!-- Preloader -->
-    <div id="spinner" class="show">
+    <div id="spinner">
         <div class="preloader-logo">M<span>E</span>.</div>
         <div class="preloader-tagline">Security &amp; HVAC Solutions</div>
         <div class="preloader-bar"><div class="preloader-bar-fill"></div></div>
@@ -162,12 +162,25 @@
     </section>
 
     <!-- ═══════════════════════════════════════════
-         MARQUEE
+         MARQUEE — Infinite scroll
     ═══════════════════════════════════════════ -->
-    <div class="py-5 border-y border-gray-200 dark:border-darkBorder bg-gray-50 dark:bg-darkCard overflow-hidden" aria-hidden="true">
-        <div class="marquee-wrapper">
-            <div class="marquee-content text-3xl lg:text-5xl font-barlow font-black uppercase tracking-tighter text-outline select-none">
-                &nbsp;CCTV Surveillance <span class="text-primary mx-6">✦</span> Fire Alarms <span class="text-primary mx-6">✦</span> Access Control <span class="text-primary mx-6">✦</span> HVAC Systems <span class="text-primary mx-6">✦</span> PA & Intercom <span class="text-primary mx-6">✦</span> CCTV Surveillance <span class="text-primary mx-6">✦</span> Fire Alarms <span class="text-primary mx-6">✦</span> Access Control <span class="text-primary mx-6">✦</span> HVAC Systems <span class="text-primary mx-6">✦</span> PA & Intercom <span class="text-primary mx-6">✦</span>
+    <div class="py-12 bg-black border-y border-white/5 overflow-hidden">
+        <div class="flex whitespace-nowrap marquee-track">
+            <div class="marquee-content flex items-center gap-16 px-8 text-6xl font-barlow font-black text-white/10 uppercase tracking-tighter">
+                <span>Security Systems</span> <span class="text-primary/20">•</span>
+                <span>HVAC Excellence</span> <span class="text-primary/20">•</span>
+                <span>Fire Safety</span> <span class="text-primary/20">•</span>
+                <span>CCTV Surveillance</span> <span class="text-primary/20">•</span>
+                <span>Access Control</span> <span class="text-primary/20">•</span>
+                <span>Enterprise Solutions</span> <span class="text-primary/20">•</span>
+            </div>
+            <div class="marquee-content flex items-center gap-16 px-8 text-6xl font-barlow font-black text-white/10 uppercase tracking-tighter" aria-hidden="true">
+                <span>Security Systems</span> <span class="text-primary/20">•</span>
+                <span>HVAC Excellence</span> <span class="text-primary/20">•</span>
+                <span>Fire Safety</span> <span class="text-primary/20">•</span>
+                <span>CCTV Surveillance</span> <span class="text-primary/20">•</span>
+                <span>Access Control</span> <span class="text-primary/20">•</span>
+                <span>Enterprise Solutions</span> <span class="text-primary/20">•</span>
             </div>
         </div>
     </div>
@@ -350,14 +363,14 @@
                     </div>
                 </div>
 
-                <div class="portfolio-item private reveal md:mt-20" data-delay="0.1">
+                <div class="portfolio-item banking reveal md:mt-20" data-delay="0.1">
                     <div class="group relative overflow-hidden aspect-[4/3] cursor-pointer">
-                        <img src="img/portfolio-2.png" alt="Nityanand Milk Agency" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" loading="lazy">
+                        <img src="img/portfolio-2.png" alt="State Bank of India" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" loading="lazy">
                         <div class="portfolio-overlay absolute inset-0 p-8 flex flex-col justify-end">
                             <div class="portfolio-text">
-                                <p class="text-primary font-barlow font-bold tracking-widest text-xs uppercase mb-2" style="letter-spacing:0.12em;">Private Sector</p>
-                                <h5 class="text-2xl font-barlow font-bold text-white mb-1">Nityanand Milk Agency</h5>
-                                <p class="text-gray-300 font-light text-sm">AMC for CCTV Systems</p>
+                                <p class="text-primary font-barlow font-bold tracking-widest text-xs uppercase mb-2" style="letter-spacing:0.12em;">Banking Sector</p>
+                                <h5 class="text-2xl font-barlow font-bold text-white mb-1">State Bank of India</h5>
+                                <p class="text-gray-300 font-light text-sm">Fire Alarm Maintenance</p>
                             </div>
                             <a href="img/portfolio-2.png" data-lightbox="portfolio" aria-label="View project" class="absolute top-8 right-8 w-10 h-10 bg-white/10 backdrop-blur-md flex items-center justify-center text-white border border-white/20 hover:bg-primary hover:border-primary transition-all duration-300">
                                 <i class="fas fa-expand-alt text-sm"></i>
@@ -366,14 +379,14 @@
                     </div>
                 </div>
 
-                <div class="portfolio-item banking reveal" data-delay="0.05">
+                <div class="portfolio-item private reveal" data-delay="0.05">
                     <div class="group relative overflow-hidden aspect-[4/3] cursor-pointer">
-                        <img src="img/portfolio-3.png" alt="Canara Bank" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" loading="lazy">
+                        <img src="img/portfolio-3.png" alt="Sainath Society" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" loading="lazy">
                         <div class="portfolio-overlay absolute inset-0 p-8 flex flex-col justify-end">
                             <div class="portfolio-text">
-                                <p class="text-primary font-barlow font-bold tracking-widest text-xs uppercase mb-2" style="letter-spacing:0.12em;">Banking Sector</p>
-                                <h5 class="text-2xl font-barlow font-bold text-white mb-1">Canara Bank</h5>
-                                <p class="text-gray-300 font-light text-sm">Fire Alarms & Access Control</p>
+                                <p class="text-primary font-barlow font-bold tracking-widest text-xs uppercase mb-2" style="letter-spacing:0.12em;">Private Sector</p>
+                                <h5 class="text-2xl font-barlow font-bold text-white mb-1">Sainath Co-Op Soc</h5>
+                                <p class="text-gray-300 font-light text-sm">Enterprise HVAC Solution</p>
                             </div>
                             <a href="img/portfolio-3.png" data-lightbox="portfolio" aria-label="View project" class="absolute top-8 right-8 w-10 h-10 bg-white/10 backdrop-blur-md flex items-center justify-center text-white border border-white/20 hover:bg-primary hover:border-primary transition-all duration-300">
                                 <i class="fas fa-expand-alt text-sm"></i>

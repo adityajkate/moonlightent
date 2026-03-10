@@ -26,8 +26,12 @@
     /* ── Spinner ─────────────────────────────────────────── */
     var spinner = document.getElementById('spinner');
     if (spinner) {
-        spinner.classList.remove('show');
-        setTimeout(function () { spinner.remove(); }, 600);
+        window.addEventListener('load', function () {
+            setTimeout(function () {
+                spinner.classList.add('hide');
+                setTimeout(function () { spinner.remove(); }, 1000);
+            }, 600);
+        });
     }
 
     /* ── Sticky Navbar ───────────────────────────────────── */
@@ -141,6 +145,19 @@
             el.addEventListener('mouseleave', function () { document.body.classList.remove('hovering'); });
         });
     }
+
+    /* ── Magnetic Buttons ────────────────────────────────── */
+    document.querySelectorAll('.nav-link, .nav-btn, .btn-primary-solid, .btn-ghost, .theme-toggle-btn').forEach(function(el) {
+        el.addEventListener('mousemove', function(e) {
+            var rect = el.getBoundingClientRect();
+            var x = e.clientX - rect.left - rect.width / 2;
+            var y = e.clientY - rect.top - rect.height / 2;
+            el.style.transform = 'translate(' + x * 0.35 + 'px, ' + y * 0.45 + 'px)';
+        });
+        el.addEventListener('mouseleave', function() {
+            el.style.transform = '';
+        });
+    });
 
     /* ── Testimonial Slider ──────────────────────────────── */
     var track = document.querySelector('.testimonial-track');
