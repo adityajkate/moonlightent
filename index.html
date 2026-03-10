@@ -9,7 +9,7 @@
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
@@ -66,6 +66,7 @@
                 <a href="#about"    class="nav-link">About</a>
                 <a href="#services" class="nav-link">Services</a>
                 <a href="#projects" class="nav-link">Projects</a>
+                <a href="#clients"  class="nav-link">Clients</a>
             </div>
 
             <!-- Desktop Actions -->
@@ -96,6 +97,7 @@
                 <a href="#about"    class="text-gray-800 dark:text-gray-200">About</a>
                 <a href="#services" class="text-gray-800 dark:text-gray-200">Services</a>
                 <a href="#projects" class="text-gray-800 dark:text-gray-200">Projects</a>
+                <a href="#clients"  class="text-gray-800 dark:text-gray-200">Clients</a>
                 <a href="contact.html" class="text-gray-800 dark:text-gray-200 mt-4 border-t border-gray-200 dark:border-darkBorder pt-6">Contact</a>
             </div>
         </div>
@@ -107,7 +109,10 @@
     <section class="relative h-screen w-full overflow-hidden bg-black" aria-label="Hero">
 
         <!-- Background Video — no overlays, no filters -->
-        <video class="hero-video" autoplay loop muted playsinline>
+        <video class="hero-video" id="hero-vid-a" autoplay muted playsinline>
+            <source src="https://d8j0ntlcm91z4.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/hf_20260306_074215_04640ca7-042c-45d6-bb56-58b1e8a42489.mp4" type="video/mp4">
+        </video>
+        <video class="hero-video" id="hero-vid-b" muted playsinline style="opacity:0;">
             <source src="https://d8j0ntlcm91z4.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/hf_20260306_074215_04640ca7-042c-45d6-bb56-58b1e8a42489.mp4" type="video/mp4">
         </video>
 
@@ -164,25 +169,84 @@
     <!-- ═══════════════════════════════════════════
          MARQUEE — Infinite scroll
     ═══════════════════════════════════════════ -->
-    <div class="py-12 bg-black border-y border-white/5 overflow-hidden">
-        <div class="flex whitespace-nowrap marquee-track">
-            <div class="marquee-content flex items-center gap-16 px-8 text-6xl font-barlow font-black text-white/10 uppercase tracking-tighter">
-                <span>Security Systems</span> <span class="text-primary/20">•</span>
-                <span>HVAC Excellence</span> <span class="text-primary/20">•</span>
-                <span>Fire Safety</span> <span class="text-primary/20">•</span>
-                <span>CCTV Surveillance</span> <span class="text-primary/20">•</span>
-                <span>Access Control</span> <span class="text-primary/20">•</span>
-                <span>Enterprise Solutions</span> <span class="text-primary/20">•</span>
-            </div>
-            <div class="marquee-content flex items-center gap-16 px-8 text-6xl font-barlow font-black text-white/10 uppercase tracking-tighter" aria-hidden="true">
-                <span>Security Systems</span> <span class="text-primary/20">•</span>
-                <span>HVAC Excellence</span> <span class="text-primary/20">•</span>
-                <span>Fire Safety</span> <span class="text-primary/20">•</span>
-                <span>CCTV Surveillance</span> <span class="text-primary/20">•</span>
-                <span>Access Control</span> <span class="text-primary/20">•</span>
-                <span>Enterprise Solutions</span> <span class="text-primary/20">•</span>
+    <div class="marquee-section bg-black border-y border-white/5 overflow-hidden py-8 select-none" aria-hidden="true">
+
+        <!-- Row 1 — scrolls left -->
+        <div class="marquee-fade-wrap mb-4">
+            <div class="flex whitespace-nowrap marquee-row marquee-left">
+                <div class="marquee-inner flex items-center gap-10 pr-10">
+                    <span class="marquee-item"><i class="fas fa-fire-alt text-primary mr-3"></i>Fire Alarm Systems</span>
+                    <span class="marquee-dot">—</span>
+                    <span class="marquee-item"><i class="fas fa-video text-primary mr-3"></i>CCTV Surveillance</span>
+                    <span class="marquee-dot">—</span>
+                    <span class="marquee-item"><i class="fas fa-fingerprint text-primary mr-3"></i>Biometric Access Control</span>
+                    <span class="marquee-dot">—</span>
+                    <span class="marquee-item"><i class="fas fa-shield-alt text-primary mr-3"></i>Burglar Alarm Systems</span>
+                    <span class="marquee-dot">—</span>
+                    <span class="marquee-item"><i class="fas fa-broadcast-tower text-primary mr-3"></i>PA &amp; Intercom</span>
+                    <span class="marquee-dot">—</span>
+                    <span class="marquee-item"><i class="fas fa-door-open text-primary mr-3"></i>Video Door Phone</span>
+                    <span class="marquee-dot">—</span>
+                    <span class="marquee-item"><i class="fas fa-water text-primary mr-3"></i>Fire Fighting Systems</span>
+                    <span class="marquee-dot">—</span>
+                </div>
+                <div class="marquee-inner flex items-center gap-10 pr-10" aria-hidden="true">
+                    <span class="marquee-item"><i class="fas fa-fire-alt text-primary mr-3"></i>Fire Alarm Systems</span>
+                    <span class="marquee-dot">—</span>
+                    <span class="marquee-item"><i class="fas fa-video text-primary mr-3"></i>CCTV Surveillance</span>
+                    <span class="marquee-dot">—</span>
+                    <span class="marquee-item"><i class="fas fa-fingerprint text-primary mr-3"></i>Biometric Access Control</span>
+                    <span class="marquee-dot">—</span>
+                    <span class="marquee-item"><i class="fas fa-shield-alt text-primary mr-3"></i>Burglar Alarm Systems</span>
+                    <span class="marquee-dot">—</span>
+                    <span class="marquee-item"><i class="fas fa-broadcast-tower text-primary mr-3"></i>PA &amp; Intercom</span>
+                    <span class="marquee-dot">—</span>
+                    <span class="marquee-item"><i class="fas fa-door-open text-primary mr-3"></i>Video Door Phone</span>
+                    <span class="marquee-dot">—</span>
+                    <span class="marquee-item"><i class="fas fa-water text-primary mr-3"></i>Fire Fighting Systems</span>
+                    <span class="marquee-dot">—</span>
+                </div>
             </div>
         </div>
+
+        <!-- Row 2 — scrolls right -->
+        <div class="marquee-fade-wrap">
+            <div class="flex whitespace-nowrap marquee-row marquee-right">
+                <div class="marquee-inner flex items-center gap-10 pr-10">
+                    <span class="marquee-item marquee-item--outline">Mumbai &amp; Thane</span>
+                    <span class="marquee-dot">—</span>
+                    <span class="marquee-item marquee-item--outline">1500+ Happy Clients</span>
+                    <span class="marquee-dot">—</span>
+                    <span class="marquee-item marquee-item--outline">2000+ Projects Done</span>
+                    <span class="marquee-dot">—</span>
+                    <span class="marquee-item marquee-item--outline">15 Years Experience</span>
+                    <span class="marquee-dot">—</span>
+                    <span class="marquee-item marquee-item--outline">Honeywell Authorised</span>
+                    <span class="marquee-dot">—</span>
+                    <span class="marquee-item marquee-item--outline">Hikvision Partner</span>
+                    <span class="marquee-dot">—</span>
+                    <span class="marquee-item marquee-item--outline">Progress Through Quality</span>
+                    <span class="marquee-dot">—</span>
+                </div>
+                <div class="marquee-inner flex items-center gap-10 pr-10" aria-hidden="true">
+                    <span class="marquee-item marquee-item--outline">Mumbai &amp; Thane</span>
+                    <span class="marquee-dot">—</span>
+                    <span class="marquee-item marquee-item--outline">1500+ Happy Clients</span>
+                    <span class="marquee-dot">—</span>
+                    <span class="marquee-item marquee-item--outline">2000+ Projects Done</span>
+                    <span class="marquee-dot">—</span>
+                    <span class="marquee-item marquee-item--outline">15 Years Experience</span>
+                    <span class="marquee-dot">—</span>
+                    <span class="marquee-item marquee-item--outline">Honeywell Authorised</span>
+                    <span class="marquee-dot">—</span>
+                    <span class="marquee-item marquee-item--outline">Hikvision Partner</span>
+                    <span class="marquee-dot">—</span>
+                    <span class="marquee-item marquee-item--outline">Progress Through Quality</span>
+                    <span class="marquee-dot">—</span>
+                </div>
+            </div>
+        </div>
+
     </div>
 
     <!-- ═══════════════════════════════════════════
@@ -199,7 +263,7 @@
                     </div>
                     <div class="absolute -bottom-8 -right-8 w-40 h-40 bg-primary rounded-full mix-blend-multiply filter blur-3xl opacity-30 pointer-events-none"></div>
                     <div class="absolute top-8 -left-4 sm:-left-8 glass-dark text-white p-5 rounded-xl hidden sm:block">
-                        <div class="text-4xl font-barlow font-black mb-1" data-count="12">0</div>
+                        <div class="text-4xl font-barlow font-black mb-1" data-count="15">0</div>
                         <div class="text-xs uppercase tracking-widest text-gray-400" style="font-family:'Barlow',sans-serif;font-size:11px;letter-spacing:0.1em;">Years Experience</div>
                     </div>
                 </div>
@@ -215,8 +279,11 @@
                     <h2 class="text-4xl sm:text-5xl lg:text-6xl font-serif-it text-gray-400 dark:text-gray-500 leading-[1.05] mb-8 tracking-tight">
                         Environments.
                     </h2>
-                    <p class="text-gray-600 dark:text-gray-400 text-lg leading-relaxed mb-12 font-light">
-                        At Moonlight Enterprises, we blend cutting-edge technology with architectural precision. Total solution provider for HVAC, Electrical, and IBMS services — designed for those who demand uncompromising quality.
+                    <p class="text-gray-600 dark:text-gray-400 text-lg leading-relaxed mb-6 font-light">
+                        Moonlight Enterprises is a fast-growing consultancy, contracting and service organisation with a qualified and experienced management team. We are a total solution provider for Fire & Security Alarm Systems, CCTV Surveillance, Biometric Access Control, P.A Systems, Video Door Phone, Burglar Alarm and Fire Fighting Systems — engineered for those who demand uncompromising quality.
+                    </p>
+                    <p class="text-gray-600 dark:text-gray-400 text-base leading-relaxed mb-12 font-light">
+                        Authorised partner for <strong class="text-gray-700 dark:text-gray-300 font-semibold">ADI Global Distribution (Honeywell)</strong>, <strong class="text-gray-700 dark:text-gray-300 font-semibold">LG Electronics</strong>, <strong class="text-gray-700 dark:text-gray-300 font-semibold">Prama Hikvision India</strong> and <strong class="text-gray-700 dark:text-gray-300 font-semibold">Dahua Technology</strong> — global standards delivered locally across Mumbai and Thane since 2011.
                     </p>
 
                     <div class="grid grid-cols-2 gap-8 mb-12 border-t border-gray-200 dark:border-darkBorder pt-10">
@@ -246,9 +313,66 @@
     </section>
 
     <!-- ═══════════════════════════════════════════
+         MANAGEMENT TEAM
+    ═══════════════════════════════════════════ -->
+    <section class="py-24 lg:py-32 bg-gray-50 dark:bg-darkCard" id="team">
+        <div class="container mx-auto px-6 lg:px-12">
+            <div class="flex flex-col md:flex-row justify-between items-end mb-16 reveal">
+                <div>
+                    <p class="text-primary font-barlow font-bold tracking-[0.25em] text-xs uppercase flex items-center gap-4 mb-4">
+                        <span class="w-8 h-[1px] bg-primary block"></span>Our Leaders
+                    </p>
+                    <h2 class="text-5xl lg:text-6xl font-barlow font-black text-gray-900 dark:text-white tracking-tight mb-2">Management</h2>
+                    <h2 class="text-5xl lg:text-6xl font-serif-it text-gray-400 dark:text-gray-500 tracking-tight">Team.</h2>
+                </div>
+                <p class="text-gray-600 dark:text-gray-400 font-light max-w-xs text-sm leading-relaxed mt-6 md:mt-0">Qualified &amp; experienced leadership driving every project to excellence.</p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+
+                <div class="border border-gray-200 dark:border-darkBorder p-8 group hover:border-primary transition-all duration-300 reveal" data-delay="0.05">
+                    <div class="w-14 h-14 bg-white dark:bg-darkBg flex items-center justify-center mb-6 group-hover:bg-primary transition-colors duration-300">
+                        <i class="fas fa-user text-gray-400 group-hover:text-white transition-colors duration-300 text-lg"></i>
+                    </div>
+                    <h3 class="text-xl font-barlow font-black text-gray-900 dark:text-white mb-1">Mr. Jayant Kate</h3>
+                    <p class="text-primary text-xs font-barlow font-bold uppercase tracking-widest mb-4" style="letter-spacing:0.1em;">Proprietor</p>
+                    <p class="text-gray-500 dark:text-gray-400 text-sm font-light leading-relaxed">Visionary leader with deep expertise in security systems, fire safety, and integrated building management solutions across Mumbai and Thane.</p>
+                    <div class="mt-6 pt-6 border-t border-gray-100 dark:border-darkBorder">
+                        <a href="tel:+918082367276" class="text-xs font-barlow font-bold text-gray-500 dark:text-gray-400 hover:text-primary transition-colors tracking-wider">+91 80823 67276</a>
+                    </div>
+                </div>
+
+                <div class="border border-gray-200 dark:border-darkBorder p-8 group hover:border-primary transition-all duration-300 reveal" data-delay="0.1">
+                    <div class="w-14 h-14 bg-white dark:bg-darkBg flex items-center justify-center mb-6 group-hover:bg-primary transition-colors duration-300">
+                        <i class="fas fa-user text-gray-400 group-hover:text-white transition-colors duration-300 text-lg"></i>
+                    </div>
+                    <h3 class="text-xl font-barlow font-black text-gray-900 dark:text-white mb-1">Mr. Jitendra Kate</h3>
+                    <p class="text-primary text-xs font-barlow font-bold uppercase tracking-widest mb-4" style="letter-spacing:0.1em;">Senior Manager</p>
+                    <p class="text-gray-500 dark:text-gray-400 text-sm font-light leading-relaxed">14+ years of hands-on banking sector experience, specialising in fire alarm, CCTV, access control and biometric systems across leading institutions.</p>
+                    <div class="mt-6 pt-6 border-t border-gray-100 dark:border-darkBorder">
+                        <a href="tel:+917715832047" class="text-xs font-barlow font-bold text-gray-500 dark:text-gray-400 hover:text-primary transition-colors tracking-wider">+91 77158 32047</a>
+                    </div>
+                </div>
+
+                <div class="border border-gray-200 dark:border-darkBorder p-8 group hover:border-primary transition-all duration-300 reveal" data-delay="0.15">
+                    <div class="w-14 h-14 bg-white dark:bg-darkBg flex items-center justify-center mb-6 group-hover:bg-primary transition-colors duration-300">
+                        <i class="fas fa-user text-gray-400 group-hover:text-white transition-colors duration-300 text-lg"></i>
+                    </div>
+                    <h3 class="text-xl font-barlow font-black text-gray-900 dark:text-white mb-1">Mr. Keshav Jadhav</h3>
+                    <p class="text-primary text-xs font-barlow font-bold uppercase tracking-widest mb-4" style="letter-spacing:0.1em;">Operations Lead</p>
+                    <p class="text-gray-500 dark:text-gray-400 text-sm font-light leading-relaxed">Core operations specialist overseeing project execution, quality control, and client deliverables across all active sites in Mumbai and Thane.</p>
+                    <div class="mt-6 pt-6 border-t border-gray-100 dark:border-darkBorder">
+                        <span class="text-xs font-barlow font-bold text-gray-400 tracking-wider uppercase">Operations</span>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════
          SERVICES
     ═══════════════════════════════════════════ -->
-    <section class="py-24 lg:py-32 bg-gray-50 dark:bg-darkCard" id="services">
+    <section class="py-24 lg:py-32 bg-white dark:bg-darkBg" id="services">
         <div class="container mx-auto px-6 lg:px-12">
             <div class="flex flex-col md:flex-row justify-between items-end mb-16 lg:mb-20 reveal">
                 <div class="max-w-2xl">
@@ -315,6 +439,64 @@
                         <i class="fas fa-arrow-right -rotate-45 group-hover:rotate-0 transition-transform duration-300 text-xs"></i>
                     </div>
                 </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════
+         WHY CHOOSE US / STRENGTHS
+    ═══════════════════════════════════════════ -->
+    <section class="py-24 lg:py-32 bg-gray-50 dark:bg-darkCard" id="strengths">
+        <div class="container mx-auto px-6 lg:px-12">
+            <div class="flex flex-col md:flex-row justify-between items-end mb-16 lg:mb-20 reveal">
+                <div>
+                    <p class="text-primary font-barlow font-bold tracking-[0.25em] text-xs uppercase flex items-center gap-4 mb-4">
+                        <span class="w-8 h-[1px] bg-primary block"></span>Why Choose Us
+                    </p>
+                    <h2 class="text-5xl lg:text-7xl font-barlow font-black text-gray-900 dark:text-white tracking-tight mb-2">Our</h2>
+                    <h2 class="text-5xl lg:text-7xl font-serif-it text-gray-400 dark:text-gray-500 tracking-tight">Strengths.</h2>
+                </div>
+                <p class="text-gray-600 dark:text-gray-400 font-light max-w-xs text-sm leading-relaxed mt-6 md:mt-0 md:text-right">Progress through Quality — the principle behind every project we deliver.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+                <div class="p-8 bg-white dark:bg-darkBg border border-gray-100 dark:border-darkBorder group hover:border-primary transition-all duration-300 reveal" data-delay="0.05">
+                    <div class="text-4xl font-barlow font-black text-gray-200 dark:text-gray-800 mb-4 group-hover:text-primary transition-colors duration-300">01</div>
+                    <h4 class="text-lg font-barlow font-bold text-gray-900 dark:text-white mb-3">World-Class Products</h4>
+                    <p class="text-gray-500 dark:text-gray-400 text-sm font-light leading-relaxed">Authorised partner for ADI Global (Honeywell), LG Electronics, Prama Hikvision and Dahua Technology — delivering globally certified products with higher efficiency and durability.</p>
+                </div>
+
+                <div class="p-8 bg-white dark:bg-darkBg border border-gray-100 dark:border-darkBorder group hover:border-primary transition-all duration-300 reveal" data-delay="0.1">
+                    <div class="text-4xl font-barlow font-black text-gray-200 dark:text-gray-800 mb-4 group-hover:text-primary transition-colors duration-300">02</div>
+                    <h4 class="text-lg font-barlow font-bold text-gray-900 dark:text-white mb-3">In-House Execution Team</h4>
+                    <p class="text-gray-500 dark:text-gray-400 text-sm font-light leading-relaxed">Dedicated in-house team for flawless project execution with minimum lead time — no outsourcing, no compromise, just precision delivery every time.</p>
+                </div>
+
+                <div class="p-8 bg-white dark:bg-darkBg border border-gray-100 dark:border-darkBorder group hover:border-primary transition-all duration-300 reveal" data-delay="0.15">
+                    <div class="text-4xl font-barlow font-black text-gray-200 dark:text-gray-800 mb-4 group-hover:text-primary transition-colors duration-300">03</div>
+                    <h4 class="text-lg font-barlow font-bold text-gray-900 dark:text-white mb-3">Single Point of Contact</h4>
+                    <p class="text-gray-500 dark:text-gray-400 text-sm font-light leading-relaxed">One SPOC for all your projects — a single window solution for complete consultancy and execution, assuring faster response time across every stage.</p>
+                </div>
+
+                <div class="p-8 bg-white dark:bg-darkBg border border-gray-100 dark:border-darkBorder group hover:border-primary transition-all duration-300 reveal" data-delay="0.05">
+                    <div class="text-4xl font-barlow font-black text-gray-200 dark:text-gray-800 mb-4 group-hover:text-primary transition-colors duration-300">04</div>
+                    <h4 class="text-lg font-barlow font-bold text-gray-900 dark:text-white mb-3">Regular Site Reports</h4>
+                    <p class="text-gray-500 dark:text-gray-400 text-sm font-light leading-relaxed">Consistent feedback and daily/weekly site report updates for all your locations — complete transparency and accountability at every step.</p>
+                </div>
+
+                <div class="p-8 bg-white dark:bg-darkBg border border-gray-100 dark:border-darkBorder group hover:border-primary transition-all duration-300 reveal" data-delay="0.1">
+                    <div class="text-4xl font-barlow font-black text-gray-200 dark:text-gray-800 mb-4 group-hover:text-primary transition-colors duration-300">05</div>
+                    <h4 class="text-lg font-barlow font-bold text-gray-900 dark:text-white mb-3">Fixed-Price Contracts</h4>
+                    <p class="text-gray-500 dark:text-gray-400 text-sm font-light leading-relaxed">Transparent, fixed pricing for a defined tenure — no hidden costs, no surprises. Predictable budgets for both high-side and low-side project scopes.</p>
+                </div>
+
+                <div class="p-8 bg-white dark:bg-darkBg border border-gray-100 dark:border-darkBorder group hover:border-primary transition-all duration-300 reveal" data-delay="0.15">
+                    <div class="text-4xl font-barlow font-black text-gray-200 dark:text-gray-800 mb-4 group-hover:text-primary transition-colors duration-300">06</div>
+                    <h4 class="text-lg font-barlow font-bold text-gray-900 dark:text-white mb-3">Full Security Range</h4>
+                    <p class="text-gray-500 dark:text-gray-400 text-sm font-light leading-relaxed">Comprehensive range of Electrical &amp; Electronics Security products — fire alarm, CCTV, biometric, PA, video door phone, burglar alarm and fire fighting under one roof.</p>
+                </div>
+
             </div>
         </div>
     </section>
@@ -419,6 +601,280 @@
     </section>
 
     <!-- ═══════════════════════════════════════════
+         BANKING SECTOR EXPERIENCE
+    ═══════════════════════════════════════════ -->
+    <section class="py-24 lg:py-32 bg-black" id="banking">
+        <div class="container mx-auto px-6 lg:px-12">
+            <div class="flex flex-col md:flex-row justify-between items-end mb-16 reveal">
+                <div>
+                    <p class="text-primary font-barlow font-bold tracking-[0.25em] text-xs uppercase flex items-center gap-4 mb-4">
+                        <span class="w-8 h-[1px] bg-primary block"></span>Sector Expertise
+                    </p>
+                    <h2 class="text-5xl lg:text-7xl font-barlow font-black text-white tracking-tight mb-2">Banking</h2>
+                    <h2 class="text-5xl lg:text-7xl font-serif-it text-gray-600 tracking-tight">Sector.</h2>
+                </div>
+                <p class="text-gray-500 font-light max-w-sm text-sm leading-relaxed mt-6 md:mt-0 md:text-right">14+ years of trusted security service to India's leading financial institutions across Mumbai, Thane and beyond.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-px bg-white/5">
+
+                <div class="bg-black p-6 reveal" data-delay="0.03">
+                    <h5 class="font-barlow font-bold text-white text-sm mb-2">Bank of India</h5>
+                    <p class="text-gray-600 text-xs font-light">Burglar Alarm · Fire Alarm · CCTV · Access Control</p>
+                </div>
+                <div class="bg-black p-6 reveal" data-delay="0.06">
+                    <h5 class="font-barlow font-bold text-white text-sm mb-2">Andhra Bank</h5>
+                    <p class="text-gray-600 text-xs font-light">Burglar Alarm System</p>
+                </div>
+                <div class="bg-black p-6 reveal" data-delay="0.09">
+                    <h5 class="font-barlow font-bold text-white text-sm mb-2">Bank of Maharashtra</h5>
+                    <p class="text-gray-600 text-xs font-light">Burglar Alarm · Fire Alarm · CCTV · AMC (Thane &amp; Palghar Region)</p>
+                </div>
+                <div class="bg-black p-6 reveal" data-delay="0.03">
+                    <h5 class="font-barlow font-bold text-white text-sm mb-2">Dena Bank</h5>
+                    <p class="text-gray-600 text-xs font-light">Burglar Alarm · Fire Alarm · Biometric System</p>
+                </div>
+                <div class="bg-black p-6 reveal" data-delay="0.06">
+                    <h5 class="font-barlow font-bold text-white text-sm mb-2">State Bank of India</h5>
+                    <p class="text-gray-600 text-xs font-light">Burglar Alarm · Fire Alarm · CCTV · Add. FAS · P.A System (GITC &amp; CBD)</p>
+                </div>
+                <div class="bg-black p-6 reveal" data-delay="0.09">
+                    <h5 class="font-barlow font-bold text-white text-sm mb-2">Corporation Bank</h5>
+                    <p class="text-gray-600 text-xs font-light">Burglar Alarm · Fire Alarm · CCTV · Access Control</p>
+                </div>
+                <div class="bg-black p-6 reveal" data-delay="0.03">
+                    <h5 class="font-barlow font-bold text-white text-sm mb-2">Indian Overseas Bank</h5>
+                    <p class="text-gray-600 text-xs font-light">Burglar Alarm · Fire Alarm · CCTV</p>
+                </div>
+                <div class="bg-black p-6 reveal" data-delay="0.06">
+                    <h5 class="font-barlow font-bold text-white text-sm mb-2">Indian Bank</h5>
+                    <p class="text-gray-600 text-xs font-light">Burglar Alarm System</p>
+                </div>
+                <div class="bg-black p-6 reveal" data-delay="0.09">
+                    <h5 class="font-barlow font-bold text-white text-sm mb-2">State Bank of Hyderabad</h5>
+                    <p class="text-gray-600 text-xs font-light">Fire Alarm · CCTV</p>
+                </div>
+                <div class="bg-black p-6 reveal" data-delay="0.03">
+                    <h5 class="font-barlow font-bold text-white text-sm mb-2">Cosmos Bank</h5>
+                    <p class="text-gray-600 text-xs font-light">Burglar Alarm System</p>
+                </div>
+                <div class="bg-black p-6 reveal" data-delay="0.06">
+                    <h5 class="font-barlow font-bold text-white text-sm mb-2">Syndicate Bank</h5>
+                    <p class="text-gray-600 text-xs font-light">Fire Alarm · CCTV</p>
+                </div>
+                <div class="bg-black p-6 reveal" data-delay="0.09">
+                    <h5 class="font-barlow font-bold text-white text-sm mb-2">Canara Bank</h5>
+                    <p class="text-gray-600 text-xs font-light">Burglar Alarm · Fire Alarm · CCTV · Add. FAS · Biometric ACS · AMC</p>
+                </div>
+                <div class="bg-black p-6 reveal" data-delay="0.03">
+                    <h5 class="font-barlow font-bold text-white text-sm mb-2">Central Bank of India</h5>
+                    <p class="text-gray-600 text-xs font-light">Burglar Alarm · Biometric System (Server Room)</p>
+                </div>
+                <div class="bg-black p-6 reveal" data-delay="0.06">
+                    <h5 class="font-barlow font-bold text-white text-sm mb-2">Development Credit Bank</h5>
+                    <p class="text-gray-600 text-xs font-light">Access Control System</p>
+                </div>
+                <div class="bg-black p-6 reveal" data-delay="0.09">
+                    <h5 class="font-barlow font-bold text-white text-sm mb-2">LIC — Mumbai Region</h5>
+                    <p class="text-gray-600 text-xs font-light">Fire Alarm System</p>
+                </div>
+                <div class="bg-black p-6 reveal" data-delay="0.03">
+                    <h5 class="font-barlow font-bold text-white text-sm mb-2">Union Bank of India</h5>
+                    <p class="text-gray-600 text-xs font-light">Burglar Alarm · Biometric System (Server Room)</p>
+                </div>
+                <div class="bg-black p-6 reveal" data-delay="0.06">
+                    <h5 class="font-barlow font-bold text-white text-sm mb-2">State Bank of Mysore</h5>
+                    <p class="text-gray-600 text-xs font-light">Burglar Alarm · Fire Alarm · CCTV</p>
+                </div>
+                <div class="bg-black p-6 reveal" data-delay="0.09">
+                    <h5 class="font-barlow font-bold text-white text-sm mb-2">United Bank of India</h5>
+                    <p class="text-gray-600 text-xs font-light">CCTV Surveillance</p>
+                </div>
+                <div class="bg-black p-6 reveal" data-delay="0.03">
+                    <h5 class="font-barlow font-bold text-white text-sm mb-2">Western Railway</h5>
+                    <p class="text-gray-600 text-xs font-light">Biometric System</p>
+                </div>
+                <div class="bg-black p-6 reveal" data-delay="0.06">
+                    <h5 class="font-barlow font-bold text-white text-sm mb-2">Fertin India Ltd, Goa</h5>
+                    <p class="text-gray-600 text-xs font-light">Biometric System · Addressable Fire Alarm</p>
+                </div>
+                <div class="bg-black p-6 reveal" data-delay="0.09">
+                    <h5 class="font-barlow font-bold text-white text-sm mb-2">G.P. Parsik Sahkari Bank</h5>
+                    <p class="text-gray-600 text-xs font-light">Security Systems</p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════
+         ESTEEMED CLIENTS
+    ═══════════════════════════════════════════ -->
+    <section class="py-24 lg:py-32 bg-white dark:bg-darkBg" id="clients">
+        <div class="container mx-auto px-6 lg:px-12">
+            <div class="flex flex-col md:flex-row justify-between items-end mb-16 reveal">
+                <div>
+                    <p class="text-primary font-barlow font-bold tracking-[0.25em] text-xs uppercase flex items-center gap-4 mb-4">
+                        <span class="w-8 h-[1px] bg-primary block"></span>Esteemed Clients
+                    </p>
+                    <h2 class="text-5xl lg:text-7xl font-barlow font-black text-gray-900 dark:text-white tracking-tight mb-2">Trusted</h2>
+                    <h2 class="text-5xl lg:text-7xl font-serif-it text-gray-400 dark:text-gray-500 tracking-tight">By Many.</h2>
+                </div>
+                <p class="text-gray-600 dark:text-gray-400 font-light max-w-xs text-sm leading-relaxed mt-6 md:mt-0 md:text-right">From multinational corporations to co-operative societies — we protect them all.</p>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 reveal" data-delay="0.1">
+
+                <div class="flex items-center gap-3 p-4 border border-gray-100 dark:border-darkBorder hover:border-primary transition-colors duration-300 group">
+                    <i class="fas fa-building text-primary text-xs flex-shrink-0"></i>
+                    <div>
+                        <p class="text-sm font-barlow font-bold text-gray-900 dark:text-white group-hover:text-primary transition-colors">Godrej Interior Dept.</p>
+                        <p class="text-xs text-gray-400 font-light">Vikhroli, Mumbai</p>
+                    </div>
+                </div>
+                <div class="flex items-center gap-3 p-4 border border-gray-100 dark:border-darkBorder hover:border-primary transition-colors duration-300 group">
+                    <i class="fas fa-building text-primary text-xs flex-shrink-0"></i>
+                    <div>
+                        <p class="text-sm font-barlow font-bold text-gray-900 dark:text-white group-hover:text-primary transition-colors">Mahanagar Tea</p>
+                        <p class="text-xs text-gray-400 font-light">Ghatkopar, Mumbai</p>
+                    </div>
+                </div>
+                <div class="flex items-center gap-3 p-4 border border-gray-100 dark:border-darkBorder hover:border-primary transition-colors duration-300 group">
+                    <i class="fas fa-building text-primary text-xs flex-shrink-0"></i>
+                    <div>
+                        <p class="text-sm font-barlow font-bold text-gray-900 dark:text-white group-hover:text-primary transition-colors">Container Corp. of India</p>
+                        <p class="text-xs text-gray-400 font-light">Mulund / Nahur</p>
+                    </div>
+                </div>
+                <div class="flex items-center gap-3 p-4 border border-gray-100 dark:border-darkBorder hover:border-primary transition-colors duration-300 group">
+                    <i class="fas fa-building text-primary text-xs flex-shrink-0"></i>
+                    <div>
+                        <p class="text-sm font-barlow font-bold text-gray-900 dark:text-white group-hover:text-primary transition-colors">Sulzer Ltd.</p>
+                        <p class="text-xs text-gray-400 font-light">Pune</p>
+                    </div>
+                </div>
+                <div class="flex items-center gap-3 p-4 border border-gray-100 dark:border-darkBorder hover:border-primary transition-colors duration-300 group">
+                    <i class="fas fa-building text-primary text-xs flex-shrink-0"></i>
+                    <div>
+                        <p class="text-sm font-barlow font-bold text-gray-900 dark:text-white group-hover:text-primary transition-colors">Nityanand Milk Agency</p>
+                        <p class="text-xs text-gray-400 font-light">Bharat Nagar, Mumbai</p>
+                    </div>
+                </div>
+                <div class="flex items-center gap-3 p-4 border border-gray-100 dark:border-darkBorder hover:border-primary transition-colors duration-300 group">
+                    <i class="fas fa-building text-primary text-xs flex-shrink-0"></i>
+                    <div>
+                        <p class="text-sm font-barlow font-bold text-gray-900 dark:text-white group-hover:text-primary transition-colors">DNS Bank</p>
+                        <p class="text-xs text-gray-400 font-light">Thane Region</p>
+                    </div>
+                </div>
+                <div class="flex items-center gap-3 p-4 border border-gray-100 dark:border-darkBorder hover:border-primary transition-colors duration-300 group">
+                    <i class="fas fa-building text-primary text-xs flex-shrink-0"></i>
+                    <div>
+                        <p class="text-sm font-barlow font-bold text-gray-900 dark:text-white group-hover:text-primary transition-colors">Dharamshi Securities Pvt. Ltd.</p>
+                        <p class="text-xs text-gray-400 font-light">Prabhadevi</p>
+                    </div>
+                </div>
+                <div class="flex items-center gap-3 p-4 border border-gray-100 dark:border-darkBorder hover:border-primary transition-colors duration-300 group">
+                    <i class="fas fa-building text-primary text-xs flex-shrink-0"></i>
+                    <div>
+                        <p class="text-sm font-barlow font-bold text-gray-900 dark:text-white group-hover:text-primary transition-colors">B4-U Courier Services</p>
+                        <p class="text-xs text-gray-400 font-light">Vileparle &amp; Bhiwandi</p>
+                    </div>
+                </div>
+                <div class="flex items-center gap-3 p-4 border border-gray-100 dark:border-darkBorder hover:border-primary transition-colors duration-300 group">
+                    <i class="fas fa-building text-primary text-xs flex-shrink-0"></i>
+                    <div>
+                        <p class="text-sm font-barlow font-bold text-gray-900 dark:text-white group-hover:text-primary transition-colors">Knowledge Classes</p>
+                        <p class="text-xs text-gray-400 font-light">Shreenagar &amp; Airoli</p>
+                    </div>
+                </div>
+                <div class="flex items-center gap-3 p-4 border border-gray-100 dark:border-darkBorder hover:border-primary transition-colors duration-300 group">
+                    <i class="fas fa-building text-primary text-xs flex-shrink-0"></i>
+                    <div>
+                        <p class="text-sm font-barlow font-bold text-gray-900 dark:text-white group-hover:text-primary transition-colors">Nikhil Milk Processor Co.</p>
+                        <p class="text-xs text-gray-400 font-light">Virar East</p>
+                    </div>
+                </div>
+                <div class="flex items-center gap-3 p-4 border border-gray-100 dark:border-darkBorder hover:border-primary transition-colors duration-300 group">
+                    <i class="fas fa-building text-primary text-xs flex-shrink-0"></i>
+                    <div>
+                        <p class="text-sm font-barlow font-bold text-gray-900 dark:text-white group-hover:text-primary transition-colors">Mata Jijabai Mahila Trust</p>
+                        <p class="text-xs text-gray-400 font-light">Thane East</p>
+                    </div>
+                </div>
+                <div class="flex items-center gap-3 p-4 border border-gray-100 dark:border-darkBorder hover:border-primary transition-colors duration-300 group">
+                    <i class="fas fa-building text-primary text-xs flex-shrink-0"></i>
+                    <div>
+                        <p class="text-sm font-barlow font-bold text-gray-900 dark:text-white group-hover:text-primary transition-colors">Qarmatek Services Pvt. Ltd.</p>
+                        <p class="text-xs text-gray-400 font-light">Thane Branch</p>
+                    </div>
+                </div>
+                <div class="flex items-center gap-3 p-4 border border-gray-100 dark:border-darkBorder hover:border-primary transition-colors duration-300 group">
+                    <i class="fas fa-building text-primary text-xs flex-shrink-0"></i>
+                    <div>
+                        <p class="text-sm font-barlow font-bold text-gray-900 dark:text-white group-hover:text-primary transition-colors">Deccan Merchants Co-Op Bank</p>
+                        <p class="text-xs text-gray-400 font-light">Mumbai</p>
+                    </div>
+                </div>
+                <div class="flex items-center gap-3 p-4 border border-gray-100 dark:border-darkBorder hover:border-primary transition-colors duration-300 group">
+                    <i class="fas fa-building text-primary text-xs flex-shrink-0"></i>
+                    <div>
+                        <p class="text-sm font-barlow font-bold text-gray-900 dark:text-white group-hover:text-primary transition-colors">Mittal Park Tower-1 Co-Op Soc.</p>
+                        <p class="text-xs text-gray-400 font-light">Thane West</p>
+                    </div>
+                </div>
+                <div class="flex items-center gap-3 p-4 border border-gray-100 dark:border-darkBorder hover:border-primary transition-colors duration-300 group">
+                    <i class="fas fa-building text-primary text-xs flex-shrink-0"></i>
+                    <div>
+                        <p class="text-sm font-barlow font-bold text-gray-900 dark:text-white group-hover:text-primary transition-colors">Chintamani Co-Op Hsg Soc</p>
+                        <p class="text-xs text-gray-400 font-light">Bld 1, 2, 3 — Thane East</p>
+                    </div>
+                </div>
+                <div class="flex items-center gap-3 p-4 border border-gray-100 dark:border-darkBorder hover:border-primary transition-colors duration-300 group">
+                    <i class="fas fa-building text-primary text-xs flex-shrink-0"></i>
+                    <div>
+                        <p class="text-sm font-barlow font-bold text-gray-900 dark:text-white group-hover:text-primary transition-colors">ICRA Ltd.</p>
+                        <p class="text-xs text-gray-400 font-light">Worli, Mumbai · Pune · Ahmedabad</p>
+                    </div>
+                </div>
+                <div class="flex items-center gap-3 p-4 border border-gray-100 dark:border-darkBorder hover:border-primary transition-colors duration-300 group">
+                    <i class="fas fa-building text-primary text-xs flex-shrink-0"></i>
+                    <div>
+                        <p class="text-sm font-barlow font-bold text-gray-900 dark:text-white group-hover:text-primary transition-colors">Jai Ganraj Co-Op Hsg Soc</p>
+                        <p class="text-xs text-gray-400 font-light">Thane West</p>
+                    </div>
+                </div>
+                <div class="flex items-center gap-3 p-4 border border-gray-100 dark:border-darkBorder hover:border-primary transition-colors duration-300 group">
+                    <i class="fas fa-building text-primary text-xs flex-shrink-0"></i>
+                    <div>
+                        <p class="text-sm font-barlow font-bold text-gray-900 dark:text-white group-hover:text-primary transition-colors">Rajmata Mahila Trust</p>
+                        <p class="text-xs text-gray-400 font-light">Thane East</p>
+                    </div>
+                </div>
+                <div class="flex items-center gap-3 p-4 border border-gray-100 dark:border-darkBorder hover:border-primary transition-colors duration-300 group">
+                    <i class="fas fa-building text-primary text-xs flex-shrink-0"></i>
+                    <div>
+                        <p class="text-sm font-barlow font-bold text-gray-900 dark:text-white group-hover:text-primary transition-colors">Shivshankar Tower</p>
+                        <p class="text-xs text-gray-400 font-light">Airoli, Sector 20</p>
+                    </div>
+                </div>
+                <div class="flex items-center gap-3 p-4 border border-gray-100 dark:border-darkBorder hover:border-primary transition-colors duration-300 group">
+                    <i class="fas fa-building text-primary text-xs flex-shrink-0"></i>
+                    <div>
+                        <p class="text-sm font-barlow font-bold text-gray-900 dark:text-white group-hover:text-primary transition-colors">Regency Arcade</p>
+                        <p class="text-xs text-gray-400 font-light">Shani Nagar, Badlapur West</p>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="text-center mt-16 reveal">
+                <a href="contact.html" class="btn-outline-dark inline-flex">Work With Us</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════
          TESTIMONIALS
     ═══════════════════════════════════════════ -->
     <section class="py-24 lg:py-32 bg-gray-50 dark:bg-darkCard border-y border-gray-200 dark:border-darkBorder">
@@ -510,6 +966,90 @@
     </section>
 
     <!-- ═══════════════════════════════════════════
+         DESIGN & OPERATION PHILOSOPHY
+    ═══════════════════════════════════════════ -->
+    <section class="py-24 lg:py-32 bg-white dark:bg-darkBg" id="philosophy">
+        <div class="container mx-auto px-6 lg:px-12">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24 items-start">
+
+                <div class="reveal reveal-left">
+                    <p class="text-primary font-barlow font-bold tracking-[0.25em] text-xs uppercase flex items-center gap-4 mb-6">
+                        <span class="w-8 h-[1px] bg-primary block"></span>Our Approach
+                    </p>
+                    <h2 class="text-4xl sm:text-5xl lg:text-6xl font-barlow font-black text-gray-900 dark:text-white leading-[1.05] mb-3 tracking-tight">Design &amp;</h2>
+                    <h2 class="text-4xl sm:text-5xl lg:text-6xl font-serif-it text-gray-400 dark:text-gray-500 leading-[1.05] mb-10 tracking-tight">Philosophy.</h2>
+                    <p class="text-gray-600 dark:text-gray-400 text-lg leading-relaxed font-light mb-6">
+                        Our goals are to provide professional engineering services which are technically correct, timely and economical. We stress accuracy, quality, good coordination, and strong management.
+                    </p>
+                    <p class="text-gray-600 dark:text-gray-400 text-base leading-relaxed font-light mb-6">
+                        We believe that a project's success is strongly based on strong management and proper coordination between the Architect, Consultant and the Engineer. We have the necessary resources and technology to execute the projects we undertake, guaranteeing a state-of-the-art outcome.
+                    </p>
+                    <p class="text-gray-600 dark:text-gray-400 text-base leading-relaxed font-light">
+                        Moonlight Enterprises' continuous growth testifies to our technical competence, responsiveness to client needs, and project management efficiency. We ensure quality and efficiency at every stage, working under the company objective — <em class="text-gray-900 dark:text-white font-medium not-italic">'Progress through Quality'.</em>
+                    </p>
+                </div>
+
+                <div class="reveal" data-delay="0.15">
+                    <div class="space-y-0 border-t border-gray-200 dark:border-darkBorder">
+
+                        <div class="flex items-start gap-6 py-6 border-b border-gray-100 dark:border-darkBorder group">
+                            <div class="w-8 h-8 flex items-center justify-center bg-gray-100 dark:bg-darkCard group-hover:bg-primary transition-colors duration-300 flex-shrink-0 mt-0.5">
+                                <i class="fas fa-drafting-compass text-gray-500 dark:text-gray-400 group-hover:text-white transition-colors text-xs"></i>
+                            </div>
+                            <div>
+                                <h5 class="font-barlow font-bold text-gray-900 dark:text-white text-sm mb-1">Detail Engineering</h5>
+                                <p class="text-gray-500 dark:text-gray-400 text-sm font-light leading-relaxed">Detail engineering based on actual data collection, converted into appropriate drawings and layouts.</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start gap-6 py-6 border-b border-gray-100 dark:border-darkBorder group">
+                            <div class="w-8 h-8 flex items-center justify-center bg-gray-100 dark:bg-darkCard group-hover:bg-primary transition-colors duration-300 flex-shrink-0 mt-0.5">
+                                <i class="fas fa-calculator text-gray-500 dark:text-gray-400 group-hover:text-white transition-colors text-xs"></i>
+                            </div>
+                            <div>
+                                <h5 class="font-barlow font-bold text-gray-900 dark:text-white text-sm mb-1">Accurate Quantity Estimation</h5>
+                                <p class="text-gray-500 dark:text-gray-400 text-sm font-light leading-relaxed">Precise quantity estimation ensuring cost control, eliminating wastage and delivering predictable project budgets.</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start gap-6 py-6 border-b border-gray-100 dark:border-darkBorder group">
+                            <div class="w-8 h-8 flex items-center justify-center bg-gray-100 dark:bg-darkCard group-hover:bg-primary transition-colors duration-300 flex-shrink-0 mt-0.5">
+                                <i class="fas fa-user-check text-gray-500 dark:text-gray-400 group-hover:text-white transition-colors text-xs"></i>
+                            </div>
+                            <div>
+                                <h5 class="font-barlow font-bold text-gray-900 dark:text-white text-sm mb-1">Personalised Attention</h5>
+                                <p class="text-gray-500 dark:text-gray-400 text-sm font-light leading-relaxed">Each project receives dedicated, personalised attention from the management team throughout its lifecycle.</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start gap-6 py-6 border-b border-gray-100 dark:border-darkBorder group">
+                            <div class="w-8 h-8 flex items-center justify-center bg-gray-100 dark:bg-darkCard group-hover:bg-primary transition-colors duration-300 flex-shrink-0 mt-0.5">
+                                <i class="fas fa-eye text-gray-500 dark:text-gray-400 group-hover:text-white transition-colors text-xs"></i>
+                            </div>
+                            <div>
+                                <h5 class="font-barlow font-bold text-gray-900 dark:text-white text-sm mb-1">Site Inspection &amp; Quality Control</h5>
+                                <p class="text-gray-500 dark:text-gray-400 text-sm font-light leading-relaxed">Regular site visits for quality inspection through the entire execution phase, ensuring adherence to specifications and drawings.</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start gap-6 py-6 group">
+                            <div class="w-8 h-8 flex items-center justify-center bg-gray-100 dark:bg-darkCard group-hover:bg-primary transition-colors duration-300 flex-shrink-0 mt-0.5">
+                                <i class="fas fa-check-double text-gray-500 dark:text-gray-400 group-hover:text-white transition-colors text-xs"></i>
+                            </div>
+                            <div>
+                                <h5 class="font-barlow font-bold text-gray-900 dark:text-white text-sm mb-1">Execution, Testing &amp; Handover</h5>
+                                <p class="text-gray-500 dark:text-gray-400 text-sm font-light leading-relaxed">Rigorous execution, testing and structured handover procedures ensure every system is fully operational and client-ready on delivery.</p>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════
          FOOTER
     ═══════════════════════════════════════════ -->
     <footer class="bg-white dark:bg-darkBg pt-24 lg:pt-32 pb-10">
@@ -537,16 +1077,21 @@
                     <a href="index.html" class="nav-logo-text inline-block mb-6" style="color:inherit;">
                         <span class="text-gray-900 dark:text-white font-barlow font-black text-3xl tracking-tight">M<span class="text-primary">E</span>.</span>
                     </a>
-                    <p class="text-gray-500 dark:text-gray-400 font-light max-w-sm mb-8 text-sm leading-relaxed">Total solution provider for HVAC, Electrical and IBMS services. Consultancy, contracting and service excellence since 2011.</p>
+                    <p class="text-gray-500 dark:text-gray-400 font-light max-w-sm mb-6 text-sm leading-relaxed">Total solution provider for Fire & Security Alarm Systems, CCTV, Biometric Access Control, PA Systems and Fire Fighting. Consultancy, contracting and service excellence since 2011.</p>
+                    <div class="mb-6 text-xs font-barlow text-gray-400 dark:text-gray-600 space-y-1">
+                        <p><span class="text-gray-500 dark:text-gray-500 font-semibold">GST:</span> 27ALFPK6957J1ZK</p>
+                        <p><span class="text-gray-500 dark:text-gray-500 font-semibold">PAN:</span> ALFPK6957J</p>
+                        <p><span class="text-gray-500 dark:text-gray-500 font-semibold">Proprietor:</span> Mr. Jayant Kate</p>
+                    </div>
                     <div class="flex gap-3">
                         <a href="#" aria-label="Facebook" class="w-9 h-9 border border-gray-200 dark:border-gray-800 flex items-center justify-center text-gray-700 dark:text-gray-300 hover:bg-primary hover:text-white hover:border-primary transition-all duration-300 text-sm">
                             <i class="fab fa-facebook-f text-xs"></i>
                         </a>
-                        <a href="#" aria-label="Twitter" class="w-9 h-9 border border-gray-200 dark:border-gray-800 flex items-center justify-center text-gray-700 dark:text-gray-300 hover:bg-primary hover:text-white hover:border-primary transition-all duration-300 text-sm">
-                            <i class="fab fa-twitter text-xs"></i>
+                        <a href="#" aria-label="X (Twitter)" class="w-9 h-9 border border-gray-200 dark:border-gray-800 flex items-center justify-center text-gray-700 dark:text-gray-300 hover:bg-primary hover:text-white hover:border-primary transition-all duration-300 text-sm">
+                            <i class="fa-brands fa-x-twitter text-xs"></i>
                         </a>
-                        <a href="#" aria-label="LinkedIn" class="w-9 h-9 border border-gray-200 dark:border-gray-800 flex items-center justify-center text-gray-700 dark:text-gray-300 hover:bg-primary hover:text-white hover:border-primary transition-all duration-300 text-sm">
-                            <i class="fab fa-linkedin-in text-xs"></i>
+                        <a href="#" aria-label="Instagram" class="w-9 h-9 border border-gray-200 dark:border-gray-800 flex items-center justify-center text-gray-700 dark:text-gray-300 hover:bg-primary hover:text-white hover:border-primary transition-all duration-300 text-sm">
+                            <i class="fab fa-instagram text-xs"></i>
                         </a>
                     </div>
                 </div>
@@ -556,8 +1101,12 @@
                     <ul class="space-y-3 text-sm font-light text-gray-500 dark:text-gray-400">
                         <li><a href="index.html" class="hover:text-primary transition-colors font-barlow">Home</a></li>
                         <li><a href="#about"    class="hover:text-primary transition-colors font-barlow">About Us</a></li>
+                        <li><a href="#team"     class="hover:text-primary transition-colors font-barlow">Our Team</a></li>
                         <li><a href="#services" class="hover:text-primary transition-colors font-barlow">Services</a></li>
+                        <li><a href="#strengths" class="hover:text-primary transition-colors font-barlow">Why Us</a></li>
                         <li><a href="#projects" class="hover:text-primary transition-colors font-barlow">Projects</a></li>
+                        <li><a href="#banking"  class="hover:text-primary transition-colors font-barlow">Banking Sector</a></li>
+                        <li><a href="#clients"  class="hover:text-primary transition-colors font-barlow">Clients</a></li>
                         <li><a href="contact.html" class="hover:text-primary transition-colors font-barlow">Contact</a></li>
                     </ul>
                 </div>
@@ -567,15 +1116,21 @@
                     <ul class="space-y-4 text-sm font-light text-gray-500 dark:text-gray-400">
                         <li class="flex items-start gap-3">
                             <i class="fas fa-map-marker-alt text-primary mt-0.5 flex-shrink-0 text-xs"></i>
-                            <span class="font-barlow">411, Sainath Co-Op Society, Thane (W)</span>
+                            <span class="font-barlow">Plot No. 411, Sainath Co-Op-Hsg. Soc., New Mhada Colony, Vartak Nagar, Thane (W) — 400606</span>
                         </li>
                         <li class="flex items-center gap-3">
                             <i class="fas fa-phone-alt text-primary flex-shrink-0 text-xs"></i>
-                            <a href="tel:+917715832047" class="hover:text-primary transition-colors font-barlow">+91 77158 32047</a>
+                            <div>
+                                <a href="tel:+918082367276" class="hover:text-primary transition-colors font-barlow block">+91 80823 67276</a>
+                                <a href="tel:+917715832047" class="hover:text-primary transition-colors font-barlow block">+91 77158 32047</a>
+                            </div>
                         </li>
                         <li class="flex items-start gap-3">
                             <i class="fas fa-envelope text-primary mt-0.5 flex-shrink-0 text-xs"></i>
-                            <a href="mailto:moonlightenterprises2011@gmail.com" class="hover:text-primary transition-colors break-all font-barlow" style="font-size:12px;">moonlightenterprises2011@gmail.com</a>
+                            <div>
+                                <a href="mailto:moonlightenterprises2011@gmail.com" class="hover:text-primary transition-colors break-all font-barlow block" style="font-size:12px;">moonlightenterprises2011@gmail.com</a>
+                                <a href="mailto:jayankate@ymail.com" class="hover:text-primary transition-colors break-all font-barlow block" style="font-size:12px;">jayantkate@ymail.com</a>
+                            </div>
                         </li>
                     </ul>
                 </div>
@@ -583,7 +1138,7 @@
 
             <div class="flex flex-col sm:flex-row justify-between items-center gap-4 border-t border-gray-100 dark:border-darkBorder pt-8" style="font-family:'Barlow',sans-serif;font-size:11px;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;color:#9ca3af;">
                 <p>© 2024 Moonlight Enterprises. All rights reserved.</p>
-                <p>Crafted by <a href="https://zencoder.ai" target="_blank" rel="noopener" class="text-gray-900 dark:text-white hover:text-primary transition-colors">Zencoder</a></p>
+                <p>Developed by <span class="text-gray-900 dark:text-white">Aditya Kate</span></p>
             </div>
         </div>
     </footer>

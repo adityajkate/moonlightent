@@ -23,6 +23,41 @@
         });
     });
 
+    /* ── Seamless Hero Video Crossfade Loop ─────────────── */
+    var vidA = document.getElementById('hero-vid-a');
+    var vidB = document.getElementById('hero-vid-b');
+    if (vidA && vidB) {
+        var CROSSFADE = 1.5;
+        var active  = vidA;
+        var standby = vidB;
+        var crossing = false;
+
+        function swapVideos() {
+            crossing = true;
+            standby.currentTime = 0;
+            standby.play();
+            active.style.opacity  = '0';
+            standby.style.opacity = '1';
+            setTimeout(function () {
+                active.pause();
+                active.currentTime = 0;
+                var tmp = active;
+                active  = standby;
+                standby = tmp;
+                crossing = false;
+            }, CROSSFADE * 1000);
+        }
+
+        function onTimeUpdate() {
+            if (!crossing && active.duration && active.currentTime >= active.duration - CROSSFADE) {
+                swapVideos();
+            }
+        }
+
+        vidA.addEventListener('timeupdate', onTimeUpdate);
+        vidB.addEventListener('timeupdate', onTimeUpdate);
+    }
+
     /* ── Spinner ─────────────────────────────────────────── */
     var spinner = document.getElementById('spinner');
     if (spinner) {
@@ -147,7 +182,7 @@
     }
 
     /* ── Magnetic Buttons ────────────────────────────────── */
-    document.querySelectorAll('.nav-link, .nav-btn, .btn-primary-solid, .btn-ghost, .theme-toggle-btn').forEach(function(el) {
+    document.querySelectorAll('.btn-primary-solid, .btn-ghost').forEach(function(el) {
         el.addEventListener('mousemove', function(e) {
             var rect = el.getBoundingClientRect();
             var x = e.clientX - rect.left - rect.width / 2;
@@ -160,11 +195,13 @@
     });
 
     /* ── Testimonial Slider ──────────────────────────────── */
+    var sliderWrap = document.querySelector('.testimonial-slider');
     var track = document.querySelector('.testimonial-track');
-    if (track) {
-        var slides = track.querySelectorAll('.testimonial-slide');
+    if (sliderWrap && track) {
+        var slides = Array.from(track.querySelectorAll('.testimonial-slide'));
         var currentSlide = 0;
         var autoTimer = null;
+        var isAnimating = false;
 
         function getVisible() {
             if (window.innerWidth >= 1024) return 3;
@@ -172,16 +209,34 @@
             return 1;
         }
 
-        function updateSlider() {
+        function getSlideWidth() {
+            var gap = 24;
             var visible = getVisible();
-            var pct = 100 / visible;
-            slides.forEach(function (s) { s.style.minWidth = pct + '%'; });
+            return (sliderWrap.offsetWidth - gap * (visible - 1)) / visible;
+        }
+
+        function updateSlider(animate) {
+            var visible = getVisible();
+            var slideW = getSlideWidth();
+            var gap = 24;
             var max = slides.length - visible;
             if (currentSlide > max) currentSlide = max;
-            track.style.transform = 'translateX(-' + (currentSlide * pct) + '%)';
+            if (currentSlide < 0) currentSlide = 0;
+
+            slides.forEach(function(s) {
+                s.style.width = slideW + 'px';
+                s.style.flexShrink = '0';
+            });
+
+            track.style.gap = gap + 'px';
+            track.style.transition = animate === false
+                ? 'none'
+                : 'transform 0.65s cubic-bezier(0.16, 1, 0.3, 1)';
+            track.style.transform = 'translateX(-' + (currentSlide * (slideW + gap)) + 'px)';
         }
 
         function goNext() {
+            if (isAnimating) return;
             var visible = getVisible();
             var max = slides.length - visible;
             currentSlide = currentSlide >= max ? 0 : currentSlide + 1;
@@ -189,6 +244,7 @@
         }
 
         function goPrev() {
+            if (isAnimating) return;
             var visible = getVisible();
             var max = slides.length - visible;
             currentSlide = currentSlide <= 0 ? max : currentSlide - 1;
@@ -196,21 +252,22 @@
         }
 
         function startAuto() {
-            autoTimer = setInterval(goNext, 5000);
-        }
-
-        function resetAuto() {
             clearInterval(autoTimer);
-            startAuto();
+            autoTimer = setInterval(goNext, 5000);
         }
 
         var nextBtn = document.querySelector('.testimonial-next');
         var prevBtn = document.querySelector('.testimonial-prev');
-        if (nextBtn) nextBtn.addEventListener('click', function () { goNext(); resetAuto(); });
-        if (prevBtn) prevBtn.addEventListener('click', function () { goPrev(); resetAuto(); });
+        if (nextBtn) nextBtn.addEventListener('click', function() { goNext(); startAuto(); });
+        if (prevBtn) prevBtn.addEventListener('click', function() { goPrev(); startAuto(); });
 
-        window.addEventListener('resize', updateSlider, { passive: true });
-        updateSlider();
+        var resizeTimer;
+        window.addEventListener('resize', function() {
+            clearTimeout(resizeTimer);
+            resizeTimer = setTimeout(function() { updateSlider(false); }, 100);
+        }, { passive: true });
+
+        updateSlider(false);
         startAuto();
     }
 

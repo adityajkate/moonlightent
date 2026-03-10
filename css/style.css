@@ -244,13 +244,22 @@ html.dark .navbar-scrolled .nav-logo-text { color: #ffffff; }
 html.dark .navbar-scrolled .theme-toggle-btn { background: rgba(255,255,255,0.08); border-color: rgba(255,255,255,0.12); color: #ccc; }
 
 /* ── Marquee ─────────────────────────────────────────── */
-.marquee-track {
-    animation: marquee 30s linear infinite;
+.marquee-row {
+    display: flex;
+    width: max-content;
 }
-@keyframes marquee {
-    0% { transform: translateX(0); }
+.marquee-left  { animation: marquee-left  35s linear infinite; }
+.marquee-right { animation: marquee-right 35s linear infinite; }
+@keyframes marquee-left {
+    0%   { transform: translateX(0); }
     100% { transform: translateX(-50%); }
 }
+@keyframes marquee-right {
+    0%   { transform: translateX(-50%); }
+    100% { transform: translateX(0); }
+}
+.marquee-section:hover .marquee-left,
+.marquee-section:hover .marquee-right { animation-play-state: paused; }
 
 /* ── Magnetic & Interaction ──────────────────────────── */
 .magnetic {
@@ -266,6 +275,7 @@ html.dark .navbar-scrolled .theme-toggle-btn { background: rgba(255,255,255,0.08
     height: 100%;
     object-fit: cover;
     z-index: 0;
+    transition: opacity 1.2s ease;
 }
 
 .hero-body {
@@ -277,7 +287,7 @@ html.dark .navbar-scrolled .theme-toggle-btn { background: rgba(255,255,255,0.08
     align-items: center;
     justify-content: center;
     text-align: center;
-    padding: 0 24px 250px;
+    padding: 0 24px;
 }
 
 /* Featured Badge */
@@ -505,23 +515,60 @@ html.dark .btn-outline-dark:hover { background: #fff; color: #111; }
 }
 .hover-reveal:hover::after { opacity: 1; }
 
-/* ── Marquee ─────────────────────────────────────────── */
-.marquee-wrapper {
+/* ── Marquee items ───────────────────────────────────── */
+.marquee-fade-wrap {
+    position: relative;
     overflow: hidden;
-    white-space: nowrap;
-    display: flex;
 }
-.marquee-content {
-    display: flex;
-    animation: marquee 30s linear infinite;
-    will-change: transform;
+.marquee-fade-wrap::before,
+.marquee-fade-wrap::after {
+    content: '';
+    position: absolute;
+    top: 0; bottom: 0;
+    width: 120px;
+    z-index: 2;
+    pointer-events: none;
+}
+.marquee-fade-wrap::before {
+    left: 0;
+    background: linear-gradient(to right, #000 0%, transparent 100%);
+}
+.marquee-fade-wrap::after {
+    right: 0;
+    background: linear-gradient(to left, #000 0%, transparent 100%);
+}
+.marquee-item {
+    font-family: 'Barlow', sans-serif;
+    font-weight: 800;
+    font-size: clamp(14px, 1.6vw, 20px);
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: rgba(255,255,255,0.55);
+    white-space: nowrap;
+    transition: color 0.3s;
+}
+.marquee-item:hover { color: #fff; }
+.marquee-item--outline {
+    color: transparent;
+    -webkit-text-stroke: 1px rgba(255,255,255,0.2);
+    font-size: clamp(13px, 1.4vw, 18px);
+    letter-spacing: 0.12em;
+    transition: -webkit-text-stroke 0.3s, color 0.3s;
+}
+.marquee-item--outline:hover {
+    color: #E63946;
+    -webkit-text-stroke: 1px #E63946;
+}
+.marquee-dot {
+    font-family: 'Barlow', sans-serif;
+    font-weight: 700;
+    color: #E63946;
+    opacity: 0.4;
+    font-size: 18px;
+    flex-shrink: 0;
 }
 @media (prefers-reduced-motion: reduce) {
-    .marquee-content { animation: none; }
-}
-@keyframes marquee {
-    0%   { transform: translateX(0); }
-    100% { transform: translateX(-50%); }
+    .marquee-left, .marquee-right { animation: none; }
 }
 .text-outline {
     color: transparent;
@@ -600,13 +647,22 @@ html.dark .service-card { border-top: 1px solid rgba(255,255,255,0.05); }
 #portfolio-filters li.filter-active::after { width: 100%; }
 
 /* ── Testimonial Slider ──────────────────────────────── */
-.testimonial-slider { overflow: hidden; }
+.testimonial-slider {
+    overflow: hidden;
+    width: 100%;
+}
 .testimonial-track {
     display: flex;
-    transition: transform 0.65s cubic-bezier(0.16, 1, 0.3, 1);
+    align-items: stretch;
     will-change: transform;
 }
-.testimonial-slide { flex-shrink: 0; padding: 0 0.75rem; }
+.testimonial-slide {
+    flex-shrink: 0;
+    height: auto;
+}
+.testimonial-slide > div {
+    height: 100%;
+}
 
 /* ── Native Lightbox ─────────────────────────────────── */
 dialog#lightbox-modal {

@@ -8,7 +8,7 @@
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
@@ -221,11 +221,11 @@
                                     <a href="#" aria-label="Facebook" class="w-9 h-9 border border-gray-200 dark:border-gray-800 flex items-center justify-center text-gray-700 dark:text-white hover:bg-primary hover:text-white hover:border-primary transition-all duration-300">
                                         <i class="fab fa-facebook-f text-xs"></i>
                                     </a>
-                                    <a href="#" aria-label="Twitter" class="w-9 h-9 border border-gray-200 dark:border-gray-800 flex items-center justify-center text-gray-700 dark:text-white hover:bg-primary hover:text-white hover:border-primary transition-all duration-300">
-                                        <i class="fab fa-twitter text-xs"></i>
+                                    <a href="#" aria-label="X (Twitter)" class="w-9 h-9 border border-gray-200 dark:border-gray-800 flex items-center justify-center text-gray-700 dark:text-white hover:bg-primary hover:text-white hover:border-primary transition-all duration-300">
+                                        <i class="fa-brands fa-x-twitter text-xs"></i>
                                     </a>
-                                    <a href="#" aria-label="LinkedIn" class="w-9 h-9 border border-gray-200 dark:border-gray-800 flex items-center justify-center text-gray-700 dark:text-white hover:bg-primary hover:text-white hover:border-primary transition-all duration-300">
-                                        <i class="fab fa-linkedin-in text-xs"></i>
+                                    <a href="#" aria-label="Instagram" class="w-9 h-9 border border-gray-200 dark:border-gray-800 flex items-center justify-center text-gray-700 dark:text-white hover:bg-primary hover:text-white hover:border-primary transition-all duration-300">
+                                        <i class="fab fa-instagram text-xs"></i>
                                     </a>
                                 </div>
                             </div>
@@ -236,22 +236,38 @@
         </div>
     </section>
 
+    <!-- MAP -->
+    <section class="bg-gray-50 dark:bg-darkCard border-t border-gray-100 dark:border-darkBorder">
+        <div class="container mx-auto px-6 lg:px-12 py-16">
+            <div class="flex flex-col md:flex-row justify-between items-end mb-8 reveal">
+                <div>
+                    <p class="text-primary font-barlow font-bold tracking-[0.25em] text-xs uppercase flex items-center gap-4 mb-3">
+                        <span class="w-8 h-[1px] bg-primary block"></span>Find Us
+                    </p>
+                    <h2 class="text-3xl sm:text-4xl font-barlow font-black text-gray-900 dark:text-white tracking-tight">Get Directions.</h2>
+                </div>
+                <a href="https://maps.google.com/?q=Plot+No+411+Sainath+Co-Op+Housing+Society+New+Mhada+Colony+Vartak+Nagar+Thane+400606" target="_blank" rel="noopener" class="mt-6 md:mt-0 inline-flex items-center gap-3 text-sm font-barlow font-bold tracking-widest uppercase hover:text-primary transition-colors">
+                    Open in Google Maps <i class="fas fa-external-link-alt text-xs"></i>
+                </a>
+            </div>
+        </div>
+        <div class="w-full h-[450px] relative reveal" data-delay="0.1">
+            <iframe
+                src="https://maps.google.com/maps?q=Sainath+Co-Op+Housing+Society,+Vartak+Nagar,+Thane,+Maharashtra+400606&output=embed&z=16"
+                width="100%"
+                height="100%"
+                style="border:0;display:block;"
+                allowfullscreen=""
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"
+                title="Moonlight Enterprises Location — Thane">
+            </iframe>
+        </div>
+    </section>
+
     <!-- FOOTER -->
     <footer class="bg-white dark:bg-darkBg pt-24 lg:pt-32 pb-10">
         <div class="container mx-auto px-6 lg:px-12">
-
-            <div class="flex flex-col md:flex-row justify-between items-start md:items-end mb-20 border-b border-gray-200 dark:border-darkBorder pb-16">
-                <div class="mb-8 md:mb-0">
-                    <h2 class="text-5xl sm:text-6xl lg:text-8xl font-barlow font-black tracking-tight text-gray-900 dark:text-white leading-[0.9]">HAVE AN</h2>
-                    <h2 class="text-5xl sm:text-6xl lg:text-8xl font-serif-it text-gray-400 dark:text-gray-600 leading-[0.9]">idea?</h2>
-                </div>
-                <a href="contact.html" class="btn-primary-solid" style="font-size:13px;padding:16px 32px;">
-                    Let's Talk
-                    <svg width="14" height="14" viewBox="0 0 16 16" fill="none">
-                        <path d="M3 8H13M13 8L9 4M13 8L9 12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                    </svg>
-                </a>
-            </div>
 
             <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
                 <div class="sm:col-span-2">
@@ -263,11 +279,11 @@
                         <a href="#" aria-label="Facebook" class="w-9 h-9 border border-gray-200 dark:border-gray-800 flex items-center justify-center text-gray-700 dark:text-gray-300 hover:bg-primary hover:text-white hover:border-primary transition-all duration-300">
                             <i class="fab fa-facebook-f text-xs"></i>
                         </a>
-                        <a href="#" aria-label="Twitter" class="w-9 h-9 border border-gray-200 dark:border-gray-800 flex items-center justify-center text-gray-700 dark:text-gray-300 hover:bg-primary hover:text-white hover:border-primary transition-all duration-300">
-                            <i class="fab fa-twitter text-xs"></i>
+                        <a href="#" aria-label="X (Twitter)" class="w-9 h-9 border border-gray-200 dark:border-gray-800 flex items-center justify-center text-gray-700 dark:text-gray-300 hover:bg-primary hover:text-white hover:border-primary transition-all duration-300">
+                            <i class="fa-brands fa-x-twitter text-xs"></i>
                         </a>
-                        <a href="#" aria-label="LinkedIn" class="w-9 h-9 border border-gray-200 dark:border-gray-800 flex items-center justify-center text-gray-700 dark:text-gray-300 hover:bg-primary hover:text-white hover:border-primary transition-all duration-300">
-                            <i class="fab fa-linkedin-in text-xs"></i>
+                        <a href="#" aria-label="Instagram" class="w-9 h-9 border border-gray-200 dark:border-gray-800 flex items-center justify-center text-gray-700 dark:text-gray-300 hover:bg-primary hover:text-white hover:border-primary transition-all duration-300">
+                            <i class="fab fa-instagram text-xs"></i>
                         </a>
                     </div>
                 </div>
@@ -304,7 +320,7 @@
 
             <div class="flex flex-col sm:flex-row justify-between items-center gap-4 border-t border-gray-100 dark:border-darkBorder pt-8" style="font-family:'Barlow',sans-serif;font-size:11px;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;color:#9ca3af;">
                 <p>© 2024 Moonlight Enterprises. All rights reserved.</p>
-                <p>Crafted by <a href="https://zencoder.ai" target="_blank" rel="noopener" class="text-gray-900 dark:text-white hover:text-primary transition-colors">Zencoder</a></p>
+                <p>Developed by <span class="text-gray-900 dark:text-white">Aditya Kate</span></p>
             </div>
         </div>
     </footer>
@@ -314,66 +330,6 @@
         <i class="fas fa-arrow-up text-sm"></i>
     </a>
 
-    <script>
-        (function () {
-            var THEME_KEY = 'me-theme';
-            var htmlEl = document.documentElement;
-            function applyTheme(t) {
-                htmlEl.classList.toggle('dark', t === 'dark');
-                htmlEl.classList.toggle('light', t !== 'dark');
-                localStorage.setItem(THEME_KEY, t);
-            }
-            var saved = localStorage.getItem(THEME_KEY);
-            if (saved) { applyTheme(saved); }
-            else { applyTheme(window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light'); }
-            document.querySelectorAll('.theme-toggle').forEach(function (btn) {
-                btn.addEventListener('click', function () {
-                    applyTheme(htmlEl.classList.contains('dark') ? 'light' : 'dark');
-                });
-            });
-
-            var navbar = document.getElementById('navbar');
-            window.addEventListener('scroll', function () {
-                navbar.classList.toggle('navbar-scrolled', window.scrollY > 60);
-            }, { passive: true });
-
-            var mobileMenuBtn = document.getElementById('mobile-menu-btn');
-            var mobileMenu = document.getElementById('mobile-menu');
-            if (mobileMenuBtn && mobileMenu) {
-                mobileMenuBtn.addEventListener('click', function () {
-                    var isOpen = !mobileMenu.classList.contains('hidden');
-                    mobileMenu.classList.toggle('hidden', isOpen);
-                    var icon = mobileMenuBtn.querySelector('i');
-                    icon.classList.toggle('fa-bars', isOpen);
-                    icon.classList.toggle('fa-times', !isOpen);
-                });
-            }
-
-            var revealEls = document.querySelectorAll('.reveal');
-            if (revealEls.length && 'IntersectionObserver' in window) {
-                var obs = new IntersectionObserver(function (entries) {
-                    entries.forEach(function (entry) {
-                        if (entry.isIntersecting) {
-                            var delay = parseFloat(entry.target.dataset.delay || 0) * 1000;
-                            setTimeout(function () { entry.target.classList.add('revealed'); }, delay);
-                            obs.unobserve(entry.target);
-                        }
-                    });
-                }, { threshold: 0.12 });
-                revealEls.forEach(function (el) { obs.observe(el); });
-            }
-
-            var backToTop = document.querySelector('.back-to-top');
-            if (backToTop) {
-                window.addEventListener('scroll', function () {
-                    backToTop.classList.toggle('hidden', window.scrollY <= 400);
-                }, { passive: true });
-                backToTop.addEventListener('click', function (e) {
-                    e.preventDefault();
-                    window.scrollTo({ top: 0, behavior: 'smooth' });
-                });
-            }
-        })();
-    </script>
+    <script src="js/main.js"></script>
 </body>
 </html>
