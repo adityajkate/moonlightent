@@ -187,7 +187,7 @@
             var rect = el.getBoundingClientRect();
             var x = e.clientX - rect.left - rect.width / 2;
             var y = e.clientY - rect.top - rect.height / 2;
-            el.style.transform = 'translate(' + x * 0.35 + 'px, ' + y * 0.45 + 'px)';
+            el.style.transform = 'translate(' + x * 0.45 + 'px, ' + y * 0.45 + 'px)';
         });
         el.addEventListener('mouseleave', function() {
             el.style.transform = '';

@@ -4,7 +4,7 @@
   ==============================================
 */
 
-@import url('https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,300;0,400;0,500;0,600;0,700;0,900;1,300;1,400&family=Instrument+Serif:ital@1&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800;900&family=Inter:wght@300;400;500;600;700&display=swap');
 
 :root {
     --primary: #E63946;
@@ -12,20 +12,45 @@
     --bg-dark: #050505;
     --card-dark: #0f0f0f;
     --border-dark: #1f1f1f;
+
+    /* Taste-skill colors */
+    --canvas-light: #F7F6F3;
+    --canvas-warm: #FBFBFA;
+    --text-primary: #111111;
+    --text-secondary: #2F3437;
+    --border-light: #EAEAEA;
+    --border-alpha: rgba(0, 0, 0, 0.06);
+
+    /* Muted pastels */
+    --pale-red-bg: #FDEBEC;
+    --pale-red-text: #9F2F2D;
+    --pale-blue-bg: #E1F3FE;
+    --pale-blue-text: #1F6C9F;
+    --pale-green-bg: #EDF3EC;
+    --pale-green-text: #346538;
+    --pale-yellow-bg: #FBF3DB;
+    --pale-yellow-text: #956400;
 }
 
 html { scroll-behavior: smooth; }
 
 body {
-    font-family: 'Barlow', sans-serif;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    color: var(--text-primary);
 }
 
-h1, h2, h3, h4, h5, h6, .font-syne {
-    font-family: 'Barlow', sans-serif;
+h1, h2, h3, h4, h5, h6, .font-serif {
+    font-family: 'Playfair Display', Georgia, serif;
+    letter-spacing: -0.03em;
+    line-height: 1.1;
+}
+
+.font-sans {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
 }
 
 .font-serif-it {
-    font-family: 'Instrument Serif', serif;
+    font-family: 'Playfair Display', Georgia, serif;
     font-style: italic;
 }
 
@@ -47,7 +72,7 @@ h1, h2, h3, h4, h5, h6, .font-syne {
 }
 
 .preloader-logo {
-    font-family: 'Barlow', sans-serif;
+    font-family: 'Playfair Display', Georgia, serif;
     font-weight: 900;
     font-size: clamp(56px, 9vw, 104px);
     color: #ffffff;
@@ -59,7 +84,7 @@ h1, h2, h3, h4, h5, h6, .font-syne {
 .preloader-logo span { color: #E63946; }
 
 .preloader-tagline {
-    font-family: 'Barlow', sans-serif;
+    font-family: 'Inter', sans-serif;
     font-size: 11px;
     font-weight: 600;
     letter-spacing: 0.3em;
@@ -165,15 +190,15 @@ html.dark .navbar-scrolled .nav-pill-wrap {
 /* Nav link */
 .nav-link {
     color: rgba(255, 255, 255, 0.72);
-    font-family: 'Barlow', sans-serif;
-    font-size: 12px;
+    font-family: 'Inter', sans-serif;
+    font-size: 11px;
     font-weight: 500;
-    letter-spacing: 0.08em;
+    letter-spacing: 0.1em;
     text-transform: uppercase;
     text-decoration: none;
-    padding: 7px 13px;
+    padding: 8px 16px;
     border-radius: 999px;
-    transition: background-color 0.2s ease, color 0.2s ease, transform 0.25s cubic-bezier(0.23, 1, 0.32, 1);
+    transition: background-color 0.7s cubic-bezier(0.32, 0.72, 0, 1), color 0.7s cubic-bezier(0.32, 0.72, 0, 1), transform 0.7s cubic-bezier(0.32, 0.72, 0, 1);
     white-space: nowrap;
 }
 .nav-link:hover { background: rgba(255, 255, 255, 0.12); color: #ffffff; }
@@ -188,12 +213,12 @@ html.dark .navbar-scrolled .nav-link.active { color: #fff; }
 
 /* Nav logo */
 .nav-logo-text {
-    font-family: 'Barlow', sans-serif;
+    font-family: 'Playfair Display', Georgia, serif;
     font-weight: 700;
-    font-size: 20px;
+    font-size: 22px;
     color: #ffffff;
     letter-spacing: -0.04em;
-    transition: color 0.3s ease;
+    transition: color 0.7s cubic-bezier(0.32, 0.72, 0, 1);
     text-decoration: none;
     flex-shrink: 0;
 }
@@ -208,20 +233,21 @@ html.dark .navbar-scrolled .nav-logo-text { color: #ffffff; }
     gap: 6px;
     background: #f8f8f8;
     color: #171717;
-    font-family: 'Barlow', sans-serif;
-    font-size: 12px;
+    font-family: 'Inter', sans-serif;
+    font-size: 11px;
     font-weight: 600;
-    letter-spacing: 0.06em;
+    letter-spacing: 0.08em;
     text-transform: uppercase;
     text-decoration: none;
-    padding: 9px 20px;
+    padding: 10px 22px;
     border-radius: 999px;
     border: none;
     cursor: pointer;
-    transition: background-color 0.2s ease, transform 0.25s cubic-bezier(0.23, 1, 0.32, 1);
+    transition: background-color 0.7s cubic-bezier(0.32, 0.72, 0, 1), transform 0.7s cubic-bezier(0.32, 0.72, 0, 1);
     flex-shrink: 0;
 }
 .nav-btn:hover { background: #ffffff; }
+.nav-btn:active { transform: scale(0.98); }
 
 /* Theme toggle */
 .theme-toggle-btn {
@@ -235,7 +261,7 @@ html.dark .navbar-scrolled .nav-logo-text { color: #ffffff; }
     align-items: center;
     justify-content: center;
     cursor: pointer;
-    transition: background-color 0.2s, border-color 0.2s, color 0.2s;
+    transition: background-color 0.7s cubic-bezier(0.32, 0.72, 0, 1), border-color 0.7s cubic-bezier(0.32, 0.72, 0, 1), color 0.7s cubic-bezier(0.32, 0.72, 0, 1);
     flex-shrink: 0;
 }
 .theme-toggle-btn:hover { background: rgba(255, 255, 255, 0.22); }
@@ -290,31 +316,33 @@ html.dark .navbar-scrolled .theme-toggle-btn { background: rgba(255,255,255,0.08
     padding: 0 24px;
 }
 
-/* Featured Badge */
+/* Featured Badge - Double Bezel */
 .hero-badge-outer {
     display: inline-flex;
     align-items: center;
-    background: rgba(255, 255, 255, 0.1);
-    backdrop-filter: blur(4px);
-    -webkit-backdrop-filter: blur(4px);
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
     border-radius: 999px;
-    padding: 4px;
-    margin-bottom: 36px;
+    padding: 3px;
+    margin-bottom: 40px;
     cursor: default;
-    transition: background-color 0.2s ease, transform 0.25s cubic-bezier(0.23, 1, 0.32, 1);
+    transition: background-color 0.7s cubic-bezier(0.32, 0.72, 0, 1), transform 0.7s cubic-bezier(0.32, 0.72, 0, 1);
 }
-.hero-badge-outer:hover { background: rgba(255,255,255,0.16); }
+.hero-badge-outer:hover { background: rgba(255,255,255,0.08); }
 
 .hero-badge-inner {
     display: inline-flex;
     align-items: center;
-    gap: 8px;
-    background: rgba(255, 255, 255, 0.9);
+    gap: 10px;
+    background: rgba(255, 255, 255, 0.95);
     backdrop-filter: blur(12px);
     -webkit-backdrop-filter: blur(12px);
     border-radius: 999px;
-    padding: 6px 18px;
-    transition: background-color 0.2s ease, transform 0.25s cubic-bezier(0.23, 1, 0.32, 1);
+    padding: 8px 20px;
+    box-shadow: inset 0 1px 2px rgba(255, 255, 255, 0.5);
+    transition: background-color 0.7s cubic-bezier(0.32, 0.72, 0, 1), transform 0.7s cubic-bezier(0.32, 0.72, 0, 1);
 }
 .hero-badge-outer:hover .hero-badge-inner { background: rgba(255,255,255,1); }
 
@@ -327,11 +355,11 @@ html.dark .navbar-scrolled .theme-toggle-btn { background: rgba(255,255,255,0.08
 }
 
 .hero-badge-text {
-    font-family: 'Barlow', sans-serif;
-    font-size: 12px;
+    font-family: 'Inter', sans-serif;
+    font-size: 11px;
     font-weight: 600;
     color: #171717;
-    letter-spacing: 0.06em;
+    letter-spacing: 0.08em;
     text-transform: uppercase;
 }
 
@@ -339,14 +367,14 @@ html.dark .navbar-scrolled .theme-toggle-btn { background: rgba(255,255,255,0.08
 .hero-headline-wrap {
     position: relative;
     display: inline-block;
-    padding: 18px 40px;
-    margin-bottom: 24px;
+    padding: 20px 48px;
+    margin-bottom: 32px;
 }
 
 .corner-accent {
     position: absolute;
-    width: 7px;
-    height: 7px;
+    width: 8px;
+    height: 8px;
     background: #ffffff;
     flex-shrink: 0;
 }
@@ -358,34 +386,34 @@ html.dark .navbar-scrolled .theme-toggle-btn { background: rgba(255,255,255,0.08
 /* Hero headline lines */
 .hl-barlow {
     display: block;
-    font-family: 'Barlow', sans-serif;
+    font-family: 'Inter', sans-serif;
     font-weight: 300;
-    font-size: clamp(36px, 5vw, 64px);
+    font-size: clamp(40px, 6vw, 72px);
     color: #ffffff;
-    line-height: 1.08;
-    letter-spacing: -0.025em;
+    line-height: 1.1;
+    letter-spacing: -0.03em;
 }
 
 .hl-serif {
     display: block;
-    font-family: 'Instrument Serif', serif;
+    font-family: 'Playfair Display', Georgia, serif;
     font-style: italic;
-    font-weight: 400;
-    font-size: clamp(36px, 5vw, 64px);
+    font-weight: 600;
+    font-size: clamp(40px, 6vw, 72px);
     color: #ffffff;
-    line-height: 1.12;
-    letter-spacing: -0.01em;
+    line-height: 1.1;
+    letter-spacing: -0.03em;
 }
 
 /* Hero sub-headline */
 .hero-sub {
-    font-family: 'Barlow', sans-serif;
+    font-family: 'Inter', sans-serif;
     font-weight: 400;
     font-size: 17px;
-    color: rgba(255, 255, 255, 0.75);
-    max-width: 520px;
-    line-height: 1.65;
-    margin-bottom: 36px;
+    color: rgba(255, 255, 255, 0.8);
+    max-width: 560px;
+    line-height: 1.6;
+    margin-bottom: 40px;
 }
 
 /* Hero CTA group */
@@ -431,75 +459,81 @@ html.dark .navbar-scrolled .theme-toggle-btn { background: rgba(255,255,255,0.08
 .btn-primary-solid {
     display: inline-flex;
     align-items: center;
-    gap: 8px;
-    background: #f8f8f8;
-    color: #171717;
-    font-family: 'Barlow', sans-serif;
+    gap: 10px;
+    background: #111111;
+    color: #ffffff;
+    font-family: 'Inter', sans-serif;
     font-size: 13px;
-    font-weight: 500;
-    letter-spacing: 0.06em;
+    font-weight: 600;
+    letter-spacing: 0.05em;
     text-transform: uppercase;
     text-decoration: none;
-    padding: 13px 30px;
-    border-radius: 2px;
+    padding: 14px 32px;
+    border-radius: 6px;
     border: none;
     cursor: pointer;
-    transition: background-color 0.2s ease, transform 0.25s cubic-bezier(0.23, 1, 0.32, 1);
+    transition: background-color 0.7s cubic-bezier(0.32, 0.72, 0, 1), transform 0.7s cubic-bezier(0.32, 0.72, 0, 1);
 }
-.btn-primary-solid:hover { background: #ffffff; }
+.btn-primary-solid:hover { background: #333333; }
+.btn-primary-solid:active { transform: scale(0.98); }
 
 .btn-ghost {
     display: inline-flex;
     align-items: center;
-    gap: 8px;
+    gap: 10px;
     background: rgba(255, 255, 255, 0.1);
     color: #ffffff;
-    font-family: 'Barlow', sans-serif;
+    font-family: 'Inter', sans-serif;
     font-size: 13px;
-    font-weight: 500;
-    letter-spacing: 0.06em;
+    font-weight: 600;
+    letter-spacing: 0.05em;
     text-transform: uppercase;
     text-decoration: none;
-    padding: 13px 30px;
-    border-radius: 2px;
+    padding: 14px 32px;
+    border-radius: 6px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
     backdrop-filter: blur(8px);
     -webkit-backdrop-filter: blur(8px);
-    transition: background-color 0.2s ease, transform 0.25s cubic-bezier(0.23, 1, 0.32, 1);
+    transition: background-color 0.7s cubic-bezier(0.32, 0.72, 0, 1), transform 0.7s cubic-bezier(0.32, 0.72, 0, 1), border-color 0.7s cubic-bezier(0.32, 0.72, 0, 1);
 }
-.btn-ghost:hover { background: rgba(255, 255, 255, 0.18); }
+.btn-ghost:hover { background: rgba(255, 255, 255, 0.18); border-color: rgba(255, 255, 255, 0.3); }
+.btn-ghost:active { transform: scale(0.98); }
 
 /* Section CTA buttons (dark bg, used outside hero) */
 .btn-outline-dark {
     display: inline-flex;
     align-items: center;
-    gap: 8px;
+    gap: 10px;
     background: transparent;
     color: #111;
-    font-family: 'Barlow', sans-serif;
+    font-family: 'Inter', sans-serif;
     font-size: 13px;
     font-weight: 600;
-    letter-spacing: 0.06em;
+    letter-spacing: 0.05em;
     text-transform: uppercase;
     text-decoration: none;
-    padding: 12px 28px;
-    border-radius: 2px;
-    border: 1.5px solid #111;
-    transition: background-color 0.2s ease, color 0.2s ease;
+    padding: 14px 32px;
+    border-radius: 6px;
+    border: 1px solid var(--border-light);
+    transition: background-color 0.7s cubic-bezier(0.32, 0.72, 0, 1), color 0.7s cubic-bezier(0.32, 0.72, 0, 1), border-color 0.7s cubic-bezier(0.32, 0.72, 0, 1);
 }
 .btn-outline-dark:hover { background: #111; color: #fff; }
-html.dark .btn-outline-dark { color: #fff; border-color: #fff; }
+.btn-outline-dark:active { transform: scale(0.98); }
+html.dark .btn-outline-dark { color: #fff; border-color: rgba(255,255,255,0.2); }
 html.dark .btn-outline-dark:hover { background: #fff; color: #111; }
 
 /* ── Scroll Reveal ───────────────────────────────────── */
 .reveal {
     opacity: 0;
-    transform: translateY(36px);
-    transition: opacity 0.75s cubic-bezier(0.16, 1, 0.3, 1),
-                transform 0.75s cubic-bezier(0.16, 1, 0.3, 1);
+    transform: translateY(12px);
+    filter: blur(4px);
+    transition: opacity 0.6s cubic-bezier(0.32, 0.72, 0, 1),
+                transform 0.6s cubic-bezier(0.32, 0.72, 0, 1),
+                filter 0.6s cubic-bezier(0.32, 0.72, 0, 1);
 }
-.reveal.reveal-left  { transform: translateX(-36px); }
-.reveal.reveal-right { transform: translateX(36px); }
-.reveal.revealed     { opacity: 1; transform: translate(0); }
+.reveal.reveal-left  { transform: translateX(-12px); }
+.reveal.reveal-right { transform: translateX(12px); }
+.reveal.revealed     { opacity: 1; transform: translate(0); filter: blur(0); }
 
 /* ── Hover Reveal (image zoom) ───────────────────────── */
 .hover-reveal { overflow: hidden; position: relative; }
@@ -538,14 +572,14 @@ html.dark .btn-outline-dark:hover { background: #fff; color: #111; }
     background: linear-gradient(to left, #000 0%, transparent 100%);
 }
 .marquee-item {
-    font-family: 'Barlow', sans-serif;
-    font-weight: 800;
+    font-family: 'Inter', sans-serif;
+    font-weight: 700;
     font-size: clamp(14px, 1.6vw, 20px);
     text-transform: uppercase;
-    letter-spacing: 0.08em;
+    letter-spacing: 0.1em;
     color: rgba(255,255,255,0.55);
     white-space: nowrap;
-    transition: color 0.3s;
+    transition: color 0.7s cubic-bezier(0.32, 0.72, 0, 1);
 }
 .marquee-item:hover { color: #fff; }
 .marquee-item--outline {
@@ -553,14 +587,14 @@ html.dark .btn-outline-dark:hover { background: #fff; color: #111; }
     -webkit-text-stroke: 1px rgba(255,255,255,0.2);
     font-size: clamp(13px, 1.4vw, 18px);
     letter-spacing: 0.12em;
-    transition: -webkit-text-stroke 0.3s, color 0.3s;
+    transition: -webkit-text-stroke 0.7s cubic-bezier(0.32, 0.72, 0, 1), color 0.7s cubic-bezier(0.32, 0.72, 0, 1);
 }
 .marquee-item--outline:hover {
     color: #E63946;
     -webkit-text-stroke: 1px #E63946;
 }
 .marquee-dot {
-    font-family: 'Barlow', sans-serif;
+    font-family: 'Inter', sans-serif;
     font-weight: 700;
     color: #E63946;
     opacity: 0.4;

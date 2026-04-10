@@ -23,10 +23,27 @@
                         darkBg: '#050505',
                         darkCard: '#0f0f0f',
                         darkBorder: '#1f1f1f',
+                        canvasLight: '#F7F6F3',
+                        canvasWarm: '#FBFBFA',
+                        textPrimary: '#111111',
+                        textSecondary: '#2F3437',
+                        borderLight: '#EAEAEA',
+                        paleRed: '#FDEBEC',
+                        paleRedText: '#9F2F2D',
+                        paleBlue: '#E1F3FE',
+                        paleBlueText: '#1F6C9F',
+                        paleGreen: '#EDF3EC',
+                        paleGreenText: '#346538',
+                        paleYellow: '#FBF3DB',
+                        paleYellowText: '#956400',
                     },
                     fontFamily: {
-                        'syne':   ['Barlow', 'sans-serif'],
-                        'barlow': ['Barlow', 'sans-serif'],
+                        'serif': ['Playfair Display', 'Georgia', 'serif'],
+                        'sans': ['Inter', '-apple-system', 'BlinkMacSystemFont', 'sans-serif'],
+                    },
+                    letterSpacing: {
+                        'tighter': '-0.03em',
+                        'wide': '0.1em',
                     }
                 }
             }
@@ -35,7 +52,7 @@
     <link href="css/style.css" rel="stylesheet">
 </head>
 
-<body class="bg-white text-gray-900 dark:bg-darkBg dark:text-gray-100 transition-colors duration-300 antialiased overflow-x-hidden">
+<body class="bg-canvasLight dark:bg-darkBg text-textPrimary dark:text-gray-100 transition-colors duration-300 antialiased overflow-x-hidden">
 
     <!-- Custom Cursor -->
     <div class="custom-cursor hidden lg:block"></div>
@@ -91,14 +108,14 @@
         </div>
 
         <!-- Mobile Menu -->
-        <div id="mobile-menu" class="hidden lg:hidden fixed inset-0 top-0 bg-white dark:bg-darkBg z-[1020] p-10 pt-24">
-            <div class="flex flex-col gap-6 text-3xl font-barlow font-black tracking-tight">
+        <div id="mobile-menu" class="hidden lg:hidden fixed inset-0 top-0 bg-canvasLight dark:bg-darkBg z-[1020] p-10 pt-24">
+            <div class="flex flex-col gap-6 text-3xl font-serif font-black tracking-tight">
                 <a href="index.html" class="text-primary">Home</a>
-                <a href="#about"    class="text-gray-800 dark:text-gray-200">About</a>
-                <a href="#services" class="text-gray-800 dark:text-gray-200">Services</a>
-                <a href="#projects" class="text-gray-800 dark:text-gray-200">Projects</a>
-                <a href="#clients"  class="text-gray-800 dark:text-gray-200">Clients</a>
-                <a href="contact.html" class="text-gray-800 dark:text-gray-200 mt-4 border-t border-gray-200 dark:border-darkBorder pt-6">Contact</a>
+                <a href="#about"    class="text-textPrimary dark:text-gray-200">About</a>
+                <a href="#services" class="text-textPrimary dark:text-gray-200">Services</a>
+                <a href="#projects" class="text-textPrimary dark:text-gray-200">Projects</a>
+                <a href="#clients"  class="text-textPrimary dark:text-gray-200">Clients</a>
+                <a href="contact.html" class="text-textPrimary dark:text-gray-200 mt-4 border-t border-borderLight dark:border-darkBorder pt-6">Contact</a>
             </div>
         </div>
     </nav>
@@ -252,59 +269,59 @@
     <!-- ═══════════════════════════════════════════
          ABOUT
     ═══════════════════════════════════════════ -->
-    <section class="py-24 lg:py-32 bg-white dark:bg-darkBg" id="about">
-        <div class="container mx-auto px-6 lg:px-12">
-            <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24 items-center">
+    <section class="py-32 lg:py-40 bg-canvasLight dark:bg-darkBg" id="about">
+        <div class="container mx-auto px-6 lg:px-12 max-w-[1400px]">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-20 lg:gap-28 items-center">
 
                 <!-- Image -->
                 <div class="relative reveal reveal-left">
-                    <div class="hover-reveal rounded-2xl overflow-hidden aspect-[4/5]">
+                    <div class="hover-reveal rounded-xl overflow-hidden aspect-[4/5] border border-borderLight dark:border-darkBorder">
                         <img src="img/about-us.png" alt="Moonlight Enterprises team" class="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700" loading="lazy">
                     </div>
-                    <div class="absolute -bottom-8 -right-8 w-40 h-40 bg-primary rounded-full mix-blend-multiply filter blur-3xl opacity-30 pointer-events-none"></div>
-                    <div class="absolute top-8 -left-4 sm:-left-8 glass-dark text-white p-5 rounded-xl hidden sm:block">
-                        <div class="text-4xl font-barlow font-black mb-1" data-count="15">0</div>
-                        <div class="text-xs uppercase tracking-widest text-gray-400" style="font-family:'Barlow',sans-serif;font-size:11px;letter-spacing:0.1em;">Years Experience</div>
+                    <div class="absolute -bottom-8 -right-8 w-40 h-40 bg-primary rounded-full mix-blend-multiply filter blur-3xl opacity-20 pointer-events-none"></div>
+                    <div class="absolute top-8 -left-4 sm:-left-8 glass-dark text-white p-6 rounded-xl hidden sm:block border border-white/10">
+                        <div class="text-5xl font-serif font-bold mb-2" data-count="15">0</div>
+                        <div class="text-xs uppercase tracking-wide text-gray-400 font-sans" style="letter-spacing:0.1em;">Years Experience</div>
                     </div>
                 </div>
 
                 <!-- Text -->
                 <div class="reveal" data-delay="0.15">
-                    <p class="text-primary font-barlow font-bold tracking-[0.25em] text-xs uppercase flex items-center gap-4 mb-6">
-                        <span class="w-8 h-[1px] bg-primary block"></span>The Agency
+                    <p class="text-primary font-sans font-semibold tracking-wide text-xs uppercase flex items-center gap-4 mb-8">
+                        <span class="w-10 h-[1px] bg-primary block"></span>The Agency
                     </p>
-                    <h2 class="text-4xl sm:text-5xl lg:text-6xl font-barlow font-black text-gray-900 dark:text-white leading-[1.05] mb-4 tracking-tight">
+                    <h2 class="text-5xl sm:text-6xl lg:text-7xl font-sans font-light text-textPrimary dark:text-white leading-[1.1] mb-3 tracking-tighter">
                         We Engineer
                     </h2>
-                    <h2 class="text-4xl sm:text-5xl lg:text-6xl font-serif-it text-gray-400 dark:text-gray-500 leading-[1.05] mb-8 tracking-tight">
+                    <h2 class="text-5xl sm:text-6xl lg:text-7xl font-serif italic text-textSecondary dark:text-gray-500 leading-[1.1] mb-10 tracking-tighter">
                         Environments.
                     </h2>
-                    <p class="text-gray-600 dark:text-gray-400 text-lg leading-relaxed mb-6 font-light">
+                    <p class="text-textSecondary dark:text-gray-400 text-base leading-relaxed mb-6 font-normal max-w-[65ch]">
                         Moonlight Enterprises is a fast-growing consultancy, contracting and service organisation with a qualified and experienced management team. We are a total solution provider for Fire & Security Alarm Systems, CCTV Surveillance, Biometric Access Control, P.A Systems, Video Door Phone, Burglar Alarm and Fire Fighting Systems — engineered for those who demand uncompromising quality.
                     </p>
-                    <p class="text-gray-600 dark:text-gray-400 text-base leading-relaxed mb-12 font-light">
-                        Authorised partner for <strong class="text-gray-700 dark:text-gray-300 font-semibold">ADI Global Distribution (Honeywell)</strong>, <strong class="text-gray-700 dark:text-gray-300 font-semibold">LG Electronics</strong>, <strong class="text-gray-700 dark:text-gray-300 font-semibold">Prama Hikvision India</strong> and <strong class="text-gray-700 dark:text-gray-300 font-semibold">Dahua Technology</strong> — global standards delivered locally across Mumbai and Thane since 2011.
+                    <p class="text-textSecondary dark:text-gray-400 text-base leading-relaxed mb-12 font-normal max-w-[65ch]">
+                        Authorised partner for <strong class="text-textPrimary dark:text-gray-300 font-semibold">ADI Global Distribution (Honeywell)</strong>, <strong class="text-textPrimary dark:text-gray-300 font-semibold">LG Electronics</strong>, <strong class="text-textPrimary dark:text-gray-300 font-semibold">Prama Hikvision India</strong> and <strong class="text-textPrimary dark:text-gray-300 font-semibold">Dahua Technology</strong> — global standards delivered locally across Mumbai and Thane since 2011.
                     </p>
 
-                    <div class="grid grid-cols-2 gap-8 mb-12 border-t border-gray-200 dark:border-darkBorder pt-10">
+                    <div class="grid grid-cols-2 gap-10 mb-12 border-t border-borderLight dark:border-darkBorder pt-10">
                         <div>
-                            <h3 class="text-5xl font-barlow font-black text-gray-900 dark:text-white mb-2">
+                            <h3 class="text-5xl font-serif font-bold text-textPrimary dark:text-white mb-2">
                                 <span data-count="1500">0</span>+
                             </h3>
-                            <p class="text-xs uppercase tracking-widest text-gray-500 font-barlow font-bold" style="letter-spacing:0.1em;">Happy Clients</p>
+                            <p class="text-xs uppercase tracking-wide text-textSecondary font-sans font-semibold" style="letter-spacing:0.1em;">Happy Clients</p>
                         </div>
                         <div>
-                            <h3 class="text-5xl font-barlow font-black text-gray-900 dark:text-white mb-2">
+                            <h3 class="text-5xl font-serif font-bold text-textPrimary dark:text-white mb-2">
                                 <span data-count="2000">0</span>+
                             </h3>
-                            <p class="text-xs uppercase tracking-widest text-gray-500 font-barlow font-bold" style="letter-spacing:0.1em;">Projects Done</p>
+                            <p class="text-xs uppercase tracking-wide text-textSecondary font-sans font-semibold" style="letter-spacing:0.1em;">Projects Done</p>
                         </div>
                     </div>
 
-                    <a href="#services" class="group inline-flex items-center gap-4 text-sm font-barlow font-bold tracking-widest uppercase">
+                    <a href="#services" class="group inline-flex items-center gap-4 text-sm font-sans font-semibold tracking-wide uppercase text-textPrimary dark:text-white">
                         Explore Our Expertise
-                        <span class="w-10 h-10 flex items-center justify-center border border-gray-300 dark:border-gray-700 group-hover:bg-primary group-hover:border-primary group-hover:text-white transition-all duration-300">
-                            <i class="fas fa-arrow-right -rotate-45 group-hover:rotate-0 transition-transform duration-300 text-sm"></i>
+                        <span class="w-10 h-10 flex items-center justify-center border border-borderLight dark:border-gray-700 rounded group-hover:bg-primary group-hover:border-primary group-hover:text-white transition-all duration-700">
+                            <i class="fas fa-arrow-right -rotate-45 group-hover:rotate-0 transition-transform duration-700 text-sm"></i>
                         </span>
                     </a>
                 </div>
@@ -315,17 +332,17 @@
     <!-- ═══════════════════════════════════════════
          MANAGEMENT TEAM
     ═══════════════════════════════════════════ -->
-    <section class="py-24 lg:py-32 bg-gray-50 dark:bg-darkCard" id="team">
-        <div class="container mx-auto px-6 lg:px-12">
-            <div class="flex flex-col md:flex-row justify-between items-end mb-16 reveal">
+    <section class="py-32 lg:py-40 bg-canvasWarm dark:bg-darkCard" id="team">
+        <div class="container mx-auto px-6 lg:px-12 max-w-[1400px]">
+            <div class="flex flex-col md:flex-row justify-between items-end mb-20 reveal">
                 <div>
-                    <p class="text-primary font-barlow font-bold tracking-[0.25em] text-xs uppercase flex items-center gap-4 mb-4">
-                        <span class="w-8 h-[1px] bg-primary block"></span>Our Leaders
+                    <p class="text-primary font-sans font-semibold tracking-wide text-xs uppercase flex items-center gap-4 mb-6">
+                        <span class="w-10 h-[1px] bg-primary block"></span>Our Leaders
                     </p>
-                    <h2 class="text-5xl lg:text-6xl font-barlow font-black text-gray-900 dark:text-white tracking-tight mb-2">Management</h2>
-                    <h2 class="text-5xl lg:text-6xl font-serif-it text-gray-400 dark:text-gray-500 tracking-tight">Team.</h2>
+                    <h2 class="text-5xl lg:text-7xl font-sans font-light text-textPrimary dark:text-white tracking-tighter mb-2">Management</h2>
+                    <h2 class="text-5xl lg:text-7xl font-serif italic text-textSecondary dark:text-gray-500 tracking-tighter">Team.</h2>
                 </div>
-                <p class="text-gray-600 dark:text-gray-400 font-light max-w-xs text-sm leading-relaxed mt-6 md:mt-0">Qualified &amp; experienced leadership driving every project to excellence.</p>
+                <p class="text-textSecondary dark:text-gray-400 font-normal max-w-xs text-base leading-relaxed mt-8 md:mt-0">Qualified &amp; experienced leadership driving every project to excellence.</p>
             </div>
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
 
@@ -372,71 +389,71 @@
     <!-- ═══════════════════════════════════════════
          SERVICES
     ═══════════════════════════════════════════ -->
-    <section class="py-24 lg:py-32 bg-white dark:bg-darkBg" id="services">
-        <div class="container mx-auto px-6 lg:px-12">
-            <div class="flex flex-col md:flex-row justify-between items-end mb-16 lg:mb-20 reveal">
+    <section class="py-32 lg:py-40 bg-canvasLight dark:bg-darkBg" id="services">
+        <div class="container mx-auto px-6 lg:px-12 max-w-[1400px]">
+            <div class="flex flex-col md:flex-row justify-between items-end mb-20 lg:mb-24 reveal">
                 <div class="max-w-2xl">
-                    <h2 class="text-5xl lg:text-7xl font-barlow font-black text-gray-900 dark:text-white tracking-tight mb-3">Capabilities.</h2>
-                    <p class="text-gray-600 dark:text-gray-400 text-lg font-light">Comprehensive infrastructure solutions delivered with precision.</p>
+                    <h2 class="text-5xl lg:text-7xl font-sans font-light text-textPrimary dark:text-white tracking-tighter mb-3">Capabilities.</h2>
+                    <p class="text-textSecondary dark:text-gray-400 text-base font-normal leading-relaxed">Comprehensive infrastructure solutions delivered with precision.</p>
                 </div>
-                <a href="contact.html" class="hidden md:inline-flex mt-8 md:mt-0 items-center gap-3 text-sm font-barlow font-bold tracking-widest uppercase hover:text-primary transition-colors">
+                <a href="contact.html" class="hidden md:inline-flex mt-8 md:mt-0 items-center gap-3 text-sm font-sans font-semibold tracking-wide uppercase hover:text-primary transition-colors duration-700">
                     Discuss a project <i class="fas fa-arrow-right text-xs"></i>
                 </a>
             </div>
 
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-10">
 
                 <div class="service-card group cursor-pointer reveal" data-delay="0.05">
-                    <div class="text-4xl text-gray-200 dark:text-gray-800 font-barlow font-black mb-6 group-hover:text-primary transition-colors duration-300">01</div>
-                    <h4 class="text-xl font-barlow font-bold text-gray-900 dark:text-white mb-4">Fire Alarm Systems</h4>
-                    <p class="service-desc text-gray-500 dark:text-gray-400 font-light mb-6 opacity-0 group-hover:opacity-100 transform translate-y-3 group-hover:translate-y-0 transition-all duration-500 text-sm leading-relaxed">Design, installation, and maintenance ensuring early detection and full safety compliance.</p>
-                    <div class="w-10 h-10 flex items-center justify-center border border-gray-200 dark:border-gray-800 group-hover:bg-primary group-hover:text-white group-hover:border-primary transition-all duration-300">
-                        <i class="fas fa-arrow-right -rotate-45 group-hover:rotate-0 transition-transform duration-300 text-xs"></i>
+                    <div class="inline-block px-3 py-1 rounded-full bg-paleRed text-paleRedText text-xs uppercase tracking-wide font-sans font-semibold mb-6">01</div>
+                    <h4 class="text-xl font-serif font-semibold text-textPrimary dark:text-white mb-4 tracking-tight">Fire Alarm Systems</h4>
+                    <p class="service-desc text-textSecondary dark:text-gray-400 font-normal mb-6 opacity-0 group-hover:opacity-100 transform translate-y-2 group-hover:translate-y-0 transition-all duration-700 text-sm leading-relaxed">Design, installation, and maintenance ensuring early detection and full safety compliance.</p>
+                    <div class="w-10 h-10 flex items-center justify-center border border-borderLight dark:border-gray-800 rounded group-hover:bg-primary group-hover:text-white group-hover:border-primary transition-all duration-700">
+                        <i class="fas fa-arrow-right -rotate-45 group-hover:rotate-0 transition-transform duration-700 text-xs"></i>
                     </div>
                 </div>
 
                 <div class="service-card group cursor-pointer reveal" data-delay="0.1">
-                    <div class="text-4xl text-gray-200 dark:text-gray-800 font-barlow font-black mb-6 group-hover:text-primary transition-colors duration-300">02</div>
-                    <h4 class="text-xl font-barlow font-bold text-gray-900 dark:text-white mb-4">CCTV Surveillance</h4>
-                    <p class="service-desc text-gray-500 dark:text-gray-400 font-light mb-6 opacity-0 group-hover:opacity-100 transform translate-y-3 group-hover:translate-y-0 transition-all duration-500 text-sm leading-relaxed">Advanced surveillance systems delivering crisp HD footage and comprehensive monitoring round-the-clock.</p>
-                    <div class="w-10 h-10 flex items-center justify-center border border-gray-200 dark:border-gray-800 group-hover:bg-primary group-hover:text-white group-hover:border-primary transition-all duration-300">
-                        <i class="fas fa-arrow-right -rotate-45 group-hover:rotate-0 transition-transform duration-300 text-xs"></i>
+                    <div class="inline-block px-3 py-1 rounded-full bg-paleBlue text-paleBlueText text-xs uppercase tracking-wide font-sans font-semibold mb-6">02</div>
+                    <h4 class="text-xl font-serif font-semibold text-textPrimary dark:text-white mb-4 tracking-tight">CCTV Surveillance</h4>
+                    <p class="service-desc text-textSecondary dark:text-gray-400 font-normal mb-6 opacity-0 group-hover:opacity-100 transform translate-y-2 group-hover:translate-y-0 transition-all duration-700 text-sm leading-relaxed">Advanced surveillance systems delivering crisp HD footage and comprehensive monitoring round-the-clock.</p>
+                    <div class="w-10 h-10 flex items-center justify-center border border-borderLight dark:border-gray-800 rounded group-hover:bg-primary group-hover:text-white group-hover:border-primary transition-all duration-700">
+                        <i class="fas fa-arrow-right -rotate-45 group-hover:rotate-0 transition-transform duration-700 text-xs"></i>
                     </div>
                 </div>
 
                 <div class="service-card group cursor-pointer reveal" data-delay="0.15">
-                    <div class="text-4xl text-gray-200 dark:text-gray-800 font-barlow font-black mb-6 group-hover:text-primary transition-colors duration-300">03</div>
-                    <h4 class="text-xl font-barlow font-bold text-gray-900 dark:text-white mb-4">Access Control</h4>
-                    <p class="service-desc text-gray-500 dark:text-gray-400 font-light mb-6 opacity-0 group-hover:opacity-100 transform translate-y-3 group-hover:translate-y-0 transition-all duration-500 text-sm leading-relaxed">Biometric and card-based systems regulating and monitoring entry to every secure area.</p>
-                    <div class="w-10 h-10 flex items-center justify-center border border-gray-200 dark:border-gray-800 group-hover:bg-primary group-hover:text-white group-hover:border-primary transition-all duration-300">
-                        <i class="fas fa-arrow-right -rotate-45 group-hover:rotate-0 transition-transform duration-300 text-xs"></i>
+                    <div class="inline-block px-3 py-1 rounded-full bg-paleGreen text-paleGreenText text-xs uppercase tracking-wide font-sans font-semibold mb-6">03</div>
+                    <h4 class="text-xl font-serif font-semibold text-textPrimary dark:text-white mb-4 tracking-tight">Access Control</h4>
+                    <p class="service-desc text-textSecondary dark:text-gray-400 font-normal mb-6 opacity-0 group-hover:opacity-100 transform translate-y-2 group-hover:translate-y-0 transition-all duration-700 text-sm leading-relaxed">Biometric and card-based systems regulating and monitoring entry to every secure area.</p>
+                    <div class="w-10 h-10 flex items-center justify-center border border-borderLight dark:border-gray-800 rounded group-hover:bg-primary group-hover:text-white group-hover:border-primary transition-all duration-700">
+                        <i class="fas fa-arrow-right -rotate-45 group-hover:rotate-0 transition-transform duration-700 text-xs"></i>
                     </div>
                 </div>
 
                 <div class="service-card group cursor-pointer reveal" data-delay="0.05">
-                    <div class="text-4xl text-gray-200 dark:text-gray-800 font-barlow font-black mb-6 group-hover:text-primary transition-colors duration-300">04</div>
-                    <h4 class="text-xl font-barlow font-bold text-gray-900 dark:text-white mb-4">Security Alarms</h4>
-                    <p class="service-desc text-gray-500 dark:text-gray-400 font-light mb-6 opacity-0 group-hover:opacity-100 transform translate-y-3 group-hover:translate-y-0 transition-all duration-500 text-sm leading-relaxed">Intelligent burglar and intruder alarm systems delivering 24/7 robust protection.</p>
-                    <div class="w-10 h-10 flex items-center justify-center border border-gray-200 dark:border-gray-800 group-hover:bg-primary group-hover:text-white group-hover:border-primary transition-all duration-300">
-                        <i class="fas fa-arrow-right -rotate-45 group-hover:rotate-0 transition-transform duration-300 text-xs"></i>
+                    <div class="inline-block px-3 py-1 rounded-full bg-paleYellow text-paleYellowText text-xs uppercase tracking-wide font-sans font-semibold mb-6">04</div>
+                    <h4 class="text-xl font-serif font-semibold text-textPrimary dark:text-white mb-4 tracking-tight">Security Alarms</h4>
+                    <p class="service-desc text-textSecondary dark:text-gray-400 font-normal mb-6 opacity-0 group-hover:opacity-100 transform translate-y-2 group-hover:translate-y-0 transition-all duration-700 text-sm leading-relaxed">Intelligent burglar and intruder alarm systems delivering 24/7 robust protection.</p>
+                    <div class="w-10 h-10 flex items-center justify-center border border-borderLight dark:border-gray-800 rounded group-hover:bg-primary group-hover:text-white group-hover:border-primary transition-all duration-700">
+                        <i class="fas fa-arrow-right -rotate-45 group-hover:rotate-0 transition-transform duration-700 text-xs"></i>
                     </div>
                 </div>
 
                 <div class="service-card group cursor-pointer reveal" data-delay="0.1">
-                    <div class="text-4xl text-gray-200 dark:text-gray-800 font-barlow font-black mb-6 group-hover:text-primary transition-colors duration-300">05</div>
-                    <h4 class="text-xl font-barlow font-bold text-gray-900 dark:text-white mb-4">HVAC Systems</h4>
-                    <p class="service-desc text-gray-500 dark:text-gray-400 font-light mb-6 opacity-0 group-hover:opacity-100 transform translate-y-3 group-hover:translate-y-0 transition-all duration-500 text-sm leading-relaxed">Precision air conditioning and ventilation design, installation and annual maintenance contracts.</p>
-                    <div class="w-10 h-10 flex items-center justify-center border border-gray-200 dark:border-gray-800 group-hover:bg-primary group-hover:text-white group-hover:border-primary transition-all duration-300">
-                        <i class="fas fa-arrow-right -rotate-45 group-hover:rotate-0 transition-transform duration-300 text-xs"></i>
+                    <div class="inline-block px-3 py-1 rounded-full bg-paleRed text-paleRedText text-xs uppercase tracking-wide font-sans font-semibold mb-6">05</div>
+                    <h4 class="text-xl font-serif font-semibold text-textPrimary dark:text-white mb-4 tracking-tight">HVAC Systems</h4>
+                    <p class="service-desc text-textSecondary dark:text-gray-400 font-normal mb-6 opacity-0 group-hover:opacity-100 transform translate-y-2 group-hover:translate-y-0 transition-all duration-700 text-sm leading-relaxed">Precision air conditioning and ventilation design, installation and annual maintenance contracts.</p>
+                    <div class="w-10 h-10 flex items-center justify-center border border-borderLight dark:border-gray-800 rounded group-hover:bg-primary group-hover:text-white group-hover:border-primary transition-all duration-700">
+                        <i class="fas fa-arrow-right -rotate-45 group-hover:rotate-0 transition-transform duration-700 text-xs"></i>
                     </div>
                 </div>
 
                 <div class="service-card group cursor-pointer reveal" data-delay="0.15">
-                    <div class="text-4xl text-gray-200 dark:text-gray-800 font-barlow font-black mb-6 group-hover:text-primary transition-colors duration-300">06</div>
-                    <h4 class="text-xl font-barlow font-bold text-gray-900 dark:text-white mb-4">PA & Intercom</h4>
-                    <p class="service-desc text-gray-500 dark:text-gray-400 font-light mb-6 opacity-0 group-hover:opacity-100 transform translate-y-3 group-hover:translate-y-0 transition-all duration-500 text-sm leading-relaxed">Public address and intercom systems engineered for seamless enterprise communication.</p>
-                    <div class="w-10 h-10 flex items-center justify-center border border-gray-200 dark:border-gray-800 group-hover:bg-primary group-hover:text-white group-hover:border-primary transition-all duration-300">
-                        <i class="fas fa-arrow-right -rotate-45 group-hover:rotate-0 transition-transform duration-300 text-xs"></i>
+                    <div class="inline-block px-3 py-1 rounded-full bg-paleBlue text-paleBlueText text-xs uppercase tracking-wide font-sans font-semibold mb-6">06</div>
+                    <h4 class="text-xl font-serif font-semibold text-textPrimary dark:text-white mb-4 tracking-tight">PA & Intercom</h4>
+                    <p class="service-desc text-textSecondary dark:text-gray-400 font-normal mb-6 opacity-0 group-hover:opacity-100 transform translate-y-2 group-hover:translate-y-0 transition-all duration-700 text-sm leading-relaxed">Public address and intercom systems engineered for seamless enterprise communication.</p>
+                    <div class="w-10 h-10 flex items-center justify-center border border-borderLight dark:border-gray-800 rounded group-hover:bg-primary group-hover:text-white group-hover:border-primary transition-all duration-700">
+                        <i class="fas fa-arrow-right -rotate-45 group-hover:rotate-0 transition-transform duration-700 text-xs"></i>
                     </div>
                 </div>
             </div>
@@ -446,20 +463,20 @@
     <!-- ═══════════════════════════════════════════
          WHY CHOOSE US / STRENGTHS
     ═══════════════════════════════════════════ -->
-    <section class="py-24 lg:py-32 bg-gray-50 dark:bg-darkCard" id="strengths">
-        <div class="container mx-auto px-6 lg:px-12">
-            <div class="flex flex-col md:flex-row justify-between items-end mb-16 lg:mb-20 reveal">
+    <section class="py-32 lg:py-40 bg-canvasWarm dark:bg-darkCard" id="strengths">
+        <div class="container mx-auto px-6 lg:px-12 max-w-[1400px]">
+            <div class="flex flex-col md:flex-row justify-between items-end mb-20 lg:mb-24 reveal">
                 <div>
-                    <p class="text-primary font-barlow font-bold tracking-[0.25em] text-xs uppercase flex items-center gap-4 mb-4">
-                        <span class="w-8 h-[1px] bg-primary block"></span>Why Choose Us
+                    <p class="text-primary font-sans font-semibold tracking-wide text-xs uppercase flex items-center gap-4 mb-6">
+                        <span class="w-10 h-[1px] bg-primary block"></span>Why Choose Us
                     </p>
-                    <h2 class="text-5xl lg:text-7xl font-barlow font-black text-gray-900 dark:text-white tracking-tight mb-2">Our</h2>
-                    <h2 class="text-5xl lg:text-7xl font-serif-it text-gray-400 dark:text-gray-500 tracking-tight">Strengths.</h2>
+                    <h2 class="text-5xl lg:text-7xl font-sans font-light text-textPrimary dark:text-white tracking-tighter mb-2">Our</h2>
+                    <h2 class="text-5xl lg:text-7xl font-serif italic text-textSecondary dark:text-gray-500 tracking-tighter">Strengths.</h2>
                 </div>
-                <p class="text-gray-600 dark:text-gray-400 font-light max-w-xs text-sm leading-relaxed mt-6 md:mt-0 md:text-right">Progress through Quality — the principle behind every project we deliver.</p>
+                <p class="text-textSecondary dark:text-gray-400 font-normal max-w-xs text-base leading-relaxed mt-8 md:mt-0 md:text-right">Progress through Quality — the principle behind every project we deliver.</p>
             </div>
 
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-10">
 
                 <div class="p-8 bg-white dark:bg-darkBg border border-gray-100 dark:border-darkBorder group hover:border-primary transition-all duration-300 reveal" data-delay="0.05">
                     <div class="text-4xl font-barlow font-black text-gray-200 dark:text-gray-800 mb-4 group-hover:text-primary transition-colors duration-300">01</div>
